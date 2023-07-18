@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "228352ae2f10df90",
+            "id": "e64047e1bd9b55a7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chapter 1.md",
+                "file": "Introduction to Git and Github/Week 1.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 231.5
   },
   "right": {
     "id": "e1628290df2af6d7",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chapter 1.md",
+                "file": "Introduction to Git and Github/Week 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chapter 1.md",
+                "file": "Introduction to Git and Github/Week 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chapter 1.md"
+                "file": "Introduction to Git and Github/Week 1.md"
               }
             }
           }
@@ -147,12 +147,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "228352ae2f10df90",
+  "active": "e64047e1bd9b55a7",
   "lastOpenFiles": [
-    "PhucPhuc-Vault",
+    "Introduction to Git and Github/Introduction to Git and Github - Goolge Coursera.md",
+    "Introduction to Git and Github/Week 1.md",
+    "README.md",
+    "Introduction to Git and Github",
     "Obsidian First Try.md",
-    "Chapter 2.md",
     "Chapter 1.md",
+    "PhucPhuc-Vault",
+    "Chapter 2.md",
     "2023-07-12.md",
     "Untitled.canvas"
   ]
