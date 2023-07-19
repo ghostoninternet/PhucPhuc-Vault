@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Introduction to Git and Github/Week 1.md",
+                "file": "Introduction to Git and Github/Week 2.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Introduction to Git and Github/Week 1.md",
+                "file": "Introduction to Git and Github/Week 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Introduction to Git and Github/Week 1.md",
+                "file": "Introduction to Git and Github/Week 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Introduction to Git and Github/Week 1.md"
+                "file": "Introduction to Git and Github/Week 2.md"
               }
             }
           }
@@ -149,8 +149,9 @@
   },
   "active": "e64047e1bd9b55a7",
   "lastOpenFiles": [
-    "Introduction to Git and Github/Introduction to Git and Github - Goolge Coursera.md",
     "Introduction to Git and Github/Week 1.md",
+    "Introduction to Git and Github/Week 2.md",
+    "Introduction to Git and Github/Introduction to Git and Github - Goolge Coursera.md",
     "README.md",
     "Introduction to Git and Github",
     "Obsidian First Try.md",

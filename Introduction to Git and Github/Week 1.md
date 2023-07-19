@@ -27,7 +27,7 @@ Each track file can be in one of three main states:
 2. staged: The changes to those files are ready to be committed to the project 
 3. committed
 `git commit -m <<Message>>`
---> Commit the file and write the message at the same time.
+--> Commit the file and write the message at the same time. Can only be used with short message.
 `git config -l`
 --> Check the current configuration
 
