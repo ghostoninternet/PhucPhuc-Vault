@@ -17,7 +17,7 @@
 `git diff --staged`
 --> Show all the **changes that have been staged** but not committed. 
 `git add -p`
---> Git show us  the changes being added and ask us if we want to stage it or not.
+--> Git show us the changes being added and ask us if we want to stage it or not.
 
 `git rm {{file's name}}`
 --> Remove files from your repository

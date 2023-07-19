@@ -46,3 +46,5 @@
 --> Create a new branch that has the same name as the other than master branch of the remote repo and switch to this branch. Git automatically copied the contents of the remote branch into the local branch
 `git remote update`
 --> Get the contents of remote branches without automatically merging any contents into the local branches
+
+# Solving Conflicts
