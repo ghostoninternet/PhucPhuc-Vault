@@ -60,4 +60,25 @@ File removals go through the same general workflow that we've seen, so you'll ne
 `git checkout -b {{new branch's name}}`
 --> Create a new branch and move to that branch
 
->When we switch branches, git also change files in our working directory or working tree whatever snapshot **HEAD** is pointing at.
+>When we switch branches, git also change files in our working directory or working tree whatever snapshot **HEAD** is pointing at. 
+>When we checkout a new branch and commit on it, those changes will be added to the history of that branch.
+>Each branch is just a pointer to a specific commit in a series of snapshots.
+
+`git branch -d {{branch's name}}`
+--> To delete a branch without any unmerged changes.
+`git branch -D {{branch's name}}`
+--> To delete a branch even if it has unmerged changes.
+
+>**Merging**: The term that Git uses for combining branched data and history together.
+>When we merge two branches together, both branches are pointed at the same commit.
+>Git uses 2 different algorithms to perform a merge: **fast-forward** and **three-way merge**.
+>**Fast-forward** is used when the checked out branch are also in the branch that's being merged. **Three-way merge** is performed when the history of the merging branches has diverged in some way, and there isn't a nice linear path to combine them via **fast-forwarding**.
+
+`git merge`
+--> Take the independent snapshots and history of one Git branch, and tangle them into another
+`git log --graph`
+--> Seeing the commits as a graph
+`git log --graph --oneline`
+--> See one line per commit
+`git merge --abort`
+--> Stop the merge, and reset the files in the working tree back to the previous commit before the merge ever happened
