@@ -33,7 +33,7 @@ File removals go through the same general workflow that we've seen, so you'll ne
 `git checkout -p {{file's name}}`
 --> Checkout individual changes instead of a whole file. This will ask you change by change if you want to go back to the previous snapshot or not.
 `git reset HEAD {{file's name}}`
---> Unstages the changes of a file
+--> Unstages the changes of a file.  Move all files out of the staging area.
 `git reset -p`
 --> Get git to ask you which specific changes you want to reset.
 `git add *`
@@ -41,3 +41,23 @@ File removals go through the same general workflow that we've seen, so you'll ne
 `git commit --amend`
 --> Git takes whatever is currently in our staging area and run the git commit workflow to overwrite the previous commit (allow us to modify and add changes to the most recent commit)
 **DO NOT** use `git commit --amend` with public repository. Fixing up a local commit with amend is great but avoid amending commits that have already been made public
+`git revert HEAD`
+--> Creates a commit that contains the inverse of all the changes made in the bad commit in order to cancel them out. By using the **HEAD** alias, we can revert the latest commit. 
+`git revert {{commit ID}}`
+--> Revert to the commit that has the commit ID equal to the {{commit ID}}
+
+# Branching and Merging
+> **Branch**: A pointer to a particular commit. It represents an independent line of development in a project
+> The default branch that git creates for you when a new repository is initialized is called **master**.
+> We can use the `git branch` command to list, create, delete and manipulate branches
+
+`git branch`
+--> List all the branches in your repository
+`git branch {{name of the new branch}}`
+--> Create a new branch 
+`git checkout`
+--> Check out the latest snapshot for both files and for branches
+`git checkout -b {{new branch's name}}`
+--> Create a new branch and move to that branch
+
+>When we switch branches, git also change files in our working directory or working tree whatever snapshot **HEAD** is pointing at.
