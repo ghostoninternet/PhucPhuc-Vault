@@ -13,8 +13,31 @@
 `git log --stat`
 --> Cause `git log` to show some stats about the changes in the commit.
 `git diff`
---> Show us all the unstaged changes that we have made to that file. We can add a specific file as a parameter if the current Git repo contains many files. 
+--> Show us all the **unstaged changes** that we have made to that file. We can add a specific file as a parameter if the current Git repo contains many files. 
 `git diff --staged`
---> Show all the changes that have been staged but not committed. 
+--> Show all the **changes that have been staged** but not committed. 
 `git add -p`
 --> Git show us  the changes being added and ask us if we want to stage it or not.
+
+`git rm {{file's name}}`
+--> Remove files from your repository
+File removals go through the same general workflow that we've seen, so you'll need to write a commit message as why you've deleted them.
+`git mv {{file's old name}} {{file's new name}}`
+--> Rename files in the repository. The `git mv` command works in a similar way to the mv command on Linux and so can be used for both moving and renaming.
+>.gitignore
+>Inside this file, we'll specify rules to tell git which files to skip for the current repo.
+
+# Undoing Things
+`git checkout {{file's name}}`
+--> Change a file back to its earlier committed state
+`git checkout -p {{file's name}}`
+--> Checkout individual changes instead of a whole file. This will ask you change by change if you want to go back to the previous snapshot or not.
+`git reset HEAD {{file's name}}`
+--> Unstages the changes of a file
+`git reset -p`
+--> Get git to ask you which specific changes you want to reset.
+`git add *`
+--> Add all changes in every files to the staging area.
+`git commit --amend`
+--> Git takes whatever is currently in our staging area and run the git commit workflow to overwrite the previous commit (allow us to modify and add changes to the most recent commit)
+**DO NOT** use `git commit --amend` with public repository. Fixing up a local commit with amend is great but avoid amending commits that have already been made public
