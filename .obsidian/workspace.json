@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/F8/HTML DOM/HTML DOM.md",
+                "file": "JavaScript/HTML DOM Knowledge/HTML Collection and NodeList.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e1628290df2af6d7",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/F8/HTML DOM/HTML DOM.md",
+                "file": "JavaScript/HTML DOM Knowledge/HTML Collection and NodeList.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/F8/HTML DOM/HTML DOM.md",
+                "file": "JavaScript/HTML DOM Knowledge/HTML Collection and NodeList.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/F8/HTML DOM/HTML DOM.md"
+                "file": "JavaScript/HTML DOM Knowledge/HTML Collection and NodeList.md"
               }
             }
           }
@@ -150,10 +149,13 @@
   },
   "active": "e64047e1bd9b55a7",
   "lastOpenFiles": [
+    "JavaScript/F8/HTML DOM/Get Elements Methods.md",
+    "JavaScript/F8/HTML DOM/HTML DOM.md",
+    "JavaScript/HTML DOM Knowledge/HTML Collection and NodeList.md",
+    "JavaScript/HTML DOM Knowledge",
     "Image Bank/pic_htmltree.gif",
     "Image Bank/pic_htmltree.gif.crdownload",
     "Introduction to Git and Github/Week 4.md",
-    "JavaScript/F8/HTML DOM/HTML DOM.md",
     "JavaScript/F8/HTML DOM",
     "JavaScript/F8",
     "JavaScript",
