@@ -48,3 +48,13 @@
 --> Get the contents of remote branches without automatically merging any contents into the local branches
 
 # Solving Conflicts
+>What if we try to push our commits from local repo to remote repo, while there are changes in the remote repo that our local repo hasn't had it ? --> It will failed and we will have to pull all new changes that exist in remote repo to our local remote repo, and then solve conflicts (if exist) and then push our changes to remote repo.
+
+`git push -u origin {{branch's name}}`
+--> ''-u' flag to create the branch upstream, which is another way of referring to remote repositories. 'origin' say that we want to push this to the origin repo, and that we are pushing the {{branch's name}} branch.
+`git rebase {{branch's name that we want to set as the new base}}`
+--> Rebase the branch that we are currently in. Git will try to replay our commits after the latest commit in that branch (the branch we rebase against). This will work automatically if the changes are made in different part of the files, but will require manual intervention if the changes were made in other files.
+`git push --delete origin {{branch's name}}`
+--> Remove remote branch
+`git branch -d {{branch's name}}`
+--> Remove local branch
