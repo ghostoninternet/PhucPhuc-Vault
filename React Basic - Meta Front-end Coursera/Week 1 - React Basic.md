@@ -7,6 +7,8 @@
 >**Component-based architecture**: Build software based on reusable components of code. **Reusable**: used multiple times and easily inserted anywhere where needed --> **Independent**: Components can exist within the same space independently from each other. 
 >**Components**: Stand alone parts of a UI. Components are **self-contained**, they have their own HTML, CSS, and JavaScript logic for functionality.
 
+# React Components and Where They Live
+
 >React provides two types of components: **Functional components** and **Class components**.
 >Every React app must contain at least **one** component, and it's called the **root component**.
 
@@ -18,4 +20,7 @@
 >The **first letter** of the name of a component file must be **Capitalize**. This is because there's a difference in how **React** treats capitalized and non capitalized component names. **React** treat lowercase component as **regular HTML elements**. Capitalize component names help **React** to distinguish **JSX element** from **HTML element**.
 >The first letter of the name of the function inside **App.js** must also be capitalized. 
 
->**Transpiling**: Interpreting a programming language and translating it to a specific target language. Using this, **React** can convert 
+>**Transpiling**: Interpreting a programming language and translating it to a specific target language. Using this, **React** can convert JSX to HTML.
+>**A browser cannot understand JSX syntax**
+>--> Need **transpiler**: this technology takes a piece of code and transforms it into some other code.
+
