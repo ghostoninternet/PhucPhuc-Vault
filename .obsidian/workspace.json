@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React Basic - Meta Front-end Coursera/Week 1 - React Basic.md",
+                "file": "Introduction to Git and Github/Week 3.md",
                 "mode": "preview",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e1628290df2af6d7",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "React Basic - Meta Front-end Coursera/Week 1 - React Basic.md",
+                "file": "Introduction to Git and Github/Week 3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "React Basic - Meta Front-end Coursera/Week 1 - React Basic.md",
+                "file": "Introduction to Git and Github/Week 3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "React Basic - Meta Front-end Coursera/Week 1 - React Basic.md"
+                "file": "Introduction to Git and Github/Week 3.md"
               }
             }
           }
@@ -150,10 +149,14 @@
   },
   "active": "b3a5ed47b9ce12c7",
   "lastOpenFiles": [
-    "Image Bank/React_pic1.png",
-    "React Basic - Meta Front-end Coursera/Week 1 - React Basic.md",
-    "React Basic - Meta Front-end Coursera/React Basic.md",
+    "Introduction to Git and Github/Week 2.md",
     "Introduction to Git and Github/Week 1.md",
+    "Introduction to Git and Github/Week 4.md",
+    "Introduction to Git and Github/Week 3.md",
+    "Introduction to Git and Github/Introduction to Git and Github - Goolge Coursera.md",
+    "React Basic - Meta Front-end Coursera/Week 1 - React Basic.md",
+    "Image Bank/React_pic1.png",
+    "React Basic - Meta Front-end Coursera/React Basic.md",
     "JavaScript/F8/HTML DOM/DOM Events.md",
     "React Basic - Meta Front-end Coursera",
     "JavaScript/F8/HTML DOM/DOM Text.md",
@@ -164,13 +167,9 @@
     "JavaScript/HTML DOM Knowledge",
     "Image Bank/pic_htmltree.gif",
     "Image Bank/pic_htmltree.gif.crdownload",
-    "Introduction to Git and Github/Week 4.md",
     "JavaScript/F8/HTML DOM",
     "JavaScript/F8",
     "JavaScript",
-    "Introduction to Git and Github/Week 3.md",
-    "Introduction to Git and Github/Introduction to Git and Github - Goolge Coursera.md",
-    "Introduction to Git and Github/Week 2.md",
     "Image Bank/Git remote workflow.png",
     "Image Bank",
     "README.md",
