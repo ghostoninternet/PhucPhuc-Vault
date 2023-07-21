@@ -62,3 +62,6 @@
 ### JSX
 >Allow developers to write HTML directly inside the JavaScript code.
 >**NOTE**: A regular JS function is used to define how **React** should render the component wherever it's referenced using the JSX syntax.
+
+### Props and children
+>`props.children`: a special prop that is automatically passed to every component.
