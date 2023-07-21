@@ -62,6 +62,11 @@
 ### JSX
 >Allow developers to write HTML directly inside the JavaScript code.
 >**NOTE**: A regular JS function is used to define how **React** should render the component wherever it's referenced using the JSX syntax.
+>
+>To style a JSX element, we have 3 ways:
+>1. We can add `className` attribute to tag in the function components. In the **index.html** file, at the head of it, add a `<linK>` element, and link it to a CSS file. Inside the CSS file, use `className` attribute to access the element that we need to style
+>2. Another way to add CSS styles to components is using **inline styles**. The inline style is a bit custom. First you need to
 
 ### Props and children
 >`props.children`: a special prop that is automatically passed to every component.
+
