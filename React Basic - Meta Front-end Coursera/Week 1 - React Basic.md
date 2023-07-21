@@ -65,8 +65,15 @@
 >
 >To style a JSX element, we have 3 ways:
 >1. We can add `className` attribute to tag in the function components. In the **index.html** file, at the head of it, add a `<linK>` element, and link it to a CSS file. Inside the CSS file, use `className` attribute to access the element that we need to style
->2. Another way to add CSS styles to components is using **inline styles**. The inline style is a bit custom. First you need to
+>2. Another way to add CSS styles to components is using **inline styles**. The inline style is a bit custom. Use the following format:
+>			`style={{CSS attribute = "value of CSS attribute", ....}}`
+>	The CSS attribute must be in **camelCased** (for example: font-size --> fontSize). The value must be inside double quotes.
+>	The part `{CSS attribute = "value of CSS attribute", ....}` is called **style object literal**.
+>3. The final way is similar to the second way, but now we move **style object literal** into a value of a variable.
 
 ### Props and children
 >`props.children`: a special prop that is automatically passed to every component.
 
+### Embedded Expressions
+>Allow JavaScript values to be inserted into HTML of React element. 
+>--> JSX is an efficient way of outputting HTML elements that contain JavaScript variable content.
