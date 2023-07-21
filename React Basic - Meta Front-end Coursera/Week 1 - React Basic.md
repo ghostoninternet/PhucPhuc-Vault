@@ -12,3 +12,10 @@
 
 **Render syntax**: `<ComponentName/>`
 ![[React_pic1.png]]
+
+>**React** uses a special syntax called **JavaScript XML** or **JSX**. JSX syntax looks very similar to **HTML**. Think JSX as a combination of **custom HTML** and **JavaScript**. You can place this syntax inside the **return function** of a functional component. **React component** must be used as a JSX element.
+
+>The **first letter** of the name of a component file must be **Capitalize**. This is because there's a difference in how **React** treats capitalized and non capitalized component names. **React** treat lowercase component as **regular HTML elements**. Capitalize component names help **React** to distinguish **JSX element** from **HTML element**.
+>The first letter of the name of the function inside **App.js** must also be capitalized. 
+
+>**Transpiling**: Interpreting a programming language and translating it to a specific target language. Using this, **React** can convert 
