@@ -46,4 +46,19 @@
 >**Component**: small piece of functionality. **Module**: a series of components. 
 >**Modular programming**: splitting your code into several modules. This complements the **component-based architecture** of React.
 >**import**: `import <name of component you want> from <the file location containing the component>`
+
+# Component Use and Styling
+
+### React Props
+>1. Pass data between components
+>2. Arguments are passed like HTML attributes
+>3. Uses the keyword props
+>4. Send multiple data types
+>5. Flexible dynamic content
+>When two components communicate with each other, the component **sending** the **props** data is known as **the parent** and the component receiving the data is known as **the child**. It's also possible for parent components to send the same data to multiple child components. This communication is **one-directional** data flow.
 >
+>**Pure functions**: functions that always returns the **same output** for the same arguments values. In React, when you declare a component using props, it **MUST NEVER MODIFY ITS OWN PROMPTS**. 
+
+### JSX
+>Allow developers to write HTML directly inside the JavaScript code.
+>**NOTE**: A regular JS function is used to define how **React** should render the component wherever it's referenced using the JSX syntax.
