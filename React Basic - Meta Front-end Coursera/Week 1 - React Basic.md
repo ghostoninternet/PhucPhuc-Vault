@@ -24,3 +24,26 @@
 >**A browser cannot understand JSX syntax**
 >--> Need **transpiler**: this technology takes a piece of code and transforms it into some other code.
 
+>**Folder Structure of a React App**
+>
+>**The src folder**: contains all the essential component files required to ensure that a React app functions.
+>**App.js and index.js**: used to render root components of the app.
+>**App.css**: contains the styles for the **App.js** components. **index.css** contains the style to use in the entire app.
+>**App.test.js, setupTests.js and reportWebVitals.js**: files related to the app's performance and testing.
+>The **most important** file in **src folder** is **index.js**. This file imports everything that this **React app** needs to render a working **React app**.
+>
+>**The root folder**:
+>**package.json**: lists information pertaining to my app, which allows **npm** to run several scripts and perform various tasks in the app itself. 
+>**package-loc.json**: holds the list of all dependencies with a specific versions. The **package-loc.json** file help **npm** rebuild the app on another machine
+
+>**Modules**: Stand-alone units of code that you can re-use again and again.
+>**export**: make a module available in another module.
+>There are two types of export in JS:
+>1. The **default export**: `export default App;`
+>Used when the function name is the same as the file name
+>2. The **named export**: `export {App};`
+>Used when you want the function name to be different from the file name.
+>**Component**: small piece of functionality. **Module**: a series of components. 
+>**Modular programming**: splitting your code into several modules. This complements the **component-based architecture** of React.
+>**import**: `import <name of component you want> from <the file location containing the component>`
+>
