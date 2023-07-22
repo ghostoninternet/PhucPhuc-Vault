@@ -12,3 +12,15 @@
 --> An interactive version of the `rebase` command
 `git push -f`
 --> Force Git to push the current snapshot into the repo 
+
+# Code Reviews
+>Going through someone else's code, documentation, or configuration and checking that it all makes sense and follows the expected patterns. 
+
+>**Nit**: comments that are usually a suggestion for making the code better.
+
+# Managing Projects
+>If you're a project maintainer, it is important that you reply promptly to pull requests and don't let them stagnate.
+>
+>It's important that you understand any changes you accept.
+>
+>When it comes to coordinating who does what and when, a common strategy for active software r
