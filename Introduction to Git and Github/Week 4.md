@@ -23,4 +23,21 @@
 >
 >It's important that you understand any changes you accept.
 >
->When it comes to coordinating who does what and when, a common strategy for active software r
+>When it comes to coordinating who does what and when, a common strategy for active software projects is to use an **issue tracker**.
+
+>In GitHub, each issue or pull request in a project has a unique number associated with it. So if we have a pull request with the ID five, there won't be an issue with ID five. GitHub will automatically reference issues and pull requests and comments when we mention them using the hash tag number format.
+
+## Continuous integration system (CI)
+>Will build and test our code every time there's a change.
+>
+>Once we have our code automatically built and tested, the next automation step is **continuous deployment**, which is sometimes called **continuous delivery (CD)**. --> New code is deployed often.
+>
+>Example tools: **Jenkins**, **GitLab**, **GitHub Actions**, **Travis (communicate with GitHub)**.
+>
+>Concepts:
+>- **Pipeline**: Specify the steps that need to run to get the result you want.
+>- **Artifacts**: The name used to describe any files that are generated as part of the pipeline.
+>
+>1. Make sure the authorized entities for the test servers are not the same entities authorized to deploy on the production servers
+>
+>2. Always have a plan to recover you access in case your pipeline gets compromised.
