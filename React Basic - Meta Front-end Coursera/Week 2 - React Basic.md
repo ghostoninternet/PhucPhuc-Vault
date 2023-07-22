@@ -44,4 +44,25 @@
 >All data in React can be divided into **props data** and **states data**:
 >**props data**: Data outside the components that it receives and works with but can't mutate.
 >**state data**: Data inside the components that it controls and can mutate.
+
+## Hooks
+>One key benefit of hooks is that they solve the problem of unnecessary code reuse across components.
 >
+>**HOOKS**: functions that let you hook into **React state** and lifecycle features from components.
+>**useState hook**: this hook is used to manage the state within a component and keep track of it.
+>	1. Import the **useState** `import React, {useState} from 'react'`
+>	2. Declare a **state variable** `const [state, setState] = useState(initialState)`
+>	3. Provide any name `const [showMenu, setShowMenu] = useState(false)` 
+>Calling **useState** will do two things:
+>1. Create a state variable with an initial value --> `showMenu`
+>2. Creates a function to set that state variable's value --> `setShowMenu` 
+>**useState** hook should be called at the top level of your component. You can use this hook to track any kind of data: string, number, arrays, Booleans or objects.
+>
+>Hooks also come with a set of rules, that you need to follow while using them:
+>1. You can only call hooks at the top level of your component or your own hooks.
+>2. You cannot call hooks inside loops or conditions.
+>3. You can only call hooks from React functions, and not regular JavaScript functions.
+
+## State
+>State is data in a component that determines behavior.
+
