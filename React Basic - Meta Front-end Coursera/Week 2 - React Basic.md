@@ -37,6 +37,7 @@
 >2. simplify the data flow.
 >
 >Having data move through props in only one direction makes it simpler to understand the logic of how the components interact. If data were moving everywhere, all the time, then it would be much harder to comprehend its logical flow. Any optimization you tried to implement would likely not be as efficient as it could be, especially in modern React.
+
 ### Why is one-way flow in React is important ?
 >1. Ensures data is moving from top to bottom through the component hierarchy.
 >2. Changes are transmitted through the system.
@@ -64,5 +65,20 @@
 >3. You can only call hooks from React functions, and not regular JavaScript functions.
 
 ## State
->State is data in a component that determines behavior.
+>State is data in a component that determines behavior. State is important because it allows components to stay in sync with each other and ensure that your app behaves as intended.
+>
+>In React, state is kept in a state of variables. The main way to change State is to alter these variables.
+>![[component_state.png]]
+>Component can be **Stateful** or **Stateless**.
 
+## Managing State
+>**Lifting State Up**: Lifting state up is about cutting the state from the child component and moving it to the parent component's code, with the intent of making the state available in sibling components.
+>
+>**Prop drilling**: prop drilling is a situation where you are passing data from a parent to a child component, then to a grandchild component, and so on, until it reaches a more distant component further down the component tree, where this data is required.
+
+## Context API
+![[contextAPI_props.png]]
+>**Context API** provides a streamline way to work with context in **React**
+>
+>Context Provider: Components that stores the state.
+>Context Consumer: Components that will use the state.
