@@ -64,3 +64,12 @@
 >One such approach is **code-splitting**, a practice where a module bundler like webpack splits the single bundle file into multiple bundles, which are then loaded on an as-needed basis. With the help of code-splitting, you can **lazy load** only the parts that the visitor to the app needs to have at any given time. This approach significantly reduces the download times and allows React-powered apps to get much better speeds.
 >An example of a viable alternative is **SSR (Server-side rendering)**. With SSR, React components are rendered to HTML on the server, and the visitor downloads the finished HTML code. An alternative to SSR is client-side rendering, which downloads the index.html file and then lets React inject its own code into a dedicated HTML element (the **root** element in `create-react-app`). In this course, you’ve only worked with client-side rendering.
 >Sometimes, you can combine client-side rendering and server-side rendering. This approach results in what’s referred to as **isomorphic apps**.
+
+### How to work wit Audio and Video
+>1. Load a local video using `<video>` tag.
+>2. Using specific instructions on how a given social media platform recommends that you embed the video and audio assets into website.
+>3. Using Third-party NPM package.
+>		How to choose the right one ?
+>		1. Check the frequency of updates
+>		2. Check GitHub page.
+>		3. Search the package name.
