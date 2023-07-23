@@ -42,3 +42,8 @@
 ![[SPA_example.png]]
 ![[Traditional_example.png]]
 
+# Using Assets in React
+
+### How to use assets ?
+>1. Import an asset
+>2. Use an asset (**name reference** or **path reference** (must use **require(asset path)** ))
