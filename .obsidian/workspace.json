@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "5c0ebf9e0d7e6f08",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Ôn tập Thực Hành Kiến Trúc Máy Tính.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "React Basic - Meta Front-end Coursera/Week 3 - React Basic.md",
+                "file": "Ôn tập Thực Hành Kiến Trúc Máy Tính.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "React Basic - Meta Front-end Coursera/Week 3 - React Basic.md",
+                "file": "Ôn tập Thực Hành Kiến Trúc Máy Tính.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "React Basic - Meta Front-end Coursera/Week 3 - React Basic.md"
+                "file": "Ôn tập Thực Hành Kiến Trúc Máy Tính.md"
               }
             }
           }
@@ -147,10 +160,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b3a5ed47b9ce12c7",
+  "active": "5c0ebf9e0d7e6f08",
   "lastOpenFiles": [
-    "React Basic - Meta Front-end Coursera/Week 2 - React Basic.md",
     "React Basic - Meta Front-end Coursera/Week 3 - React Basic.md",
+    "Ôn tập Thực Hành Kiến Trúc Máy Tính.md",
+    "React Basic - Meta Front-end Coursera/Week 2 - React Basic.md",
     "Image Bank/Traditional_example.png",
     "Image Bank/SPA_example.png",
     "Image Bank/Traditional_SPA_Lifecycle.png",
