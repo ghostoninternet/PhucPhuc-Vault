@@ -82,3 +82,8 @@
 >
 >Context Provider: Components that stores the state.
 >Context Consumer: Components that will use the state.
+
+## Stateful vs Stateless
+>**Stateful**: hold state as the internal data, the state changes based on the way the app is built, often is the user interaction. Use stateful when: **State must be maintained to work**.
+>**Stateless**: doesn't store state, any changes must be inheritance through props. Use stateless when: **State not needed to work.** 
+>
