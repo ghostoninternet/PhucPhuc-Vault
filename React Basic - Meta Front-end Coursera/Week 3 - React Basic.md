@@ -47,3 +47,20 @@
 ### How to use assets ?
 >1. Import an asset
 >2. Use an asset (**name reference** or **path reference** (must use **require(asset path)** ))
+
+>The app’s files will likely be bundled when working with a React app. Bundling is a process that takes all the imported files in an app and joins them into a single file, referred to as a **bundle**. Several tools can perform this bundling. **webpack** is the built-in tool for the `create-react-app`. Simply put, **webpack** is a module bundler. Practically, this means that it will take various kinds of files, such as SVG and image files, CSS and SCSS files, JavaScript files, and TypeScript files, and it will bundle them together so that a browser can understand that bundle and work with it.
+>
+>The imports here are from fictional libraries and resources because the specific libraries are not necessary. All these different imports can be of various file types: .js, .svg, .css, and so on. In turn, all the imported files might have their own imported files, and even those might have their imports. This means that depending on other files, all of these files can create a **dependency graph**. The order in which all these files are loading is essential. That dependency graph can get so complex that it becomes almost impossible for a human to structure a complex project and bundle all those dependencies properly. 
+>---> This is the reason you need tools like **webpack**.
+>
+>So, webpack builds a dependency graph and bundles modules into one or more files that a browser can consume.
+>
+>Another significant characteristic of webpack is that it helps developers create modern web apps.
+>It helps you achieve this using two modes: **production** mode or **development** mode.
+>1. In **development** mode, webpack bundles your files and optimizes your bundles for updates - so that any updates to any of the files in your locally developed app are quickly re-bundled. It also builds source maps so you can inspect the original file included in the bundled code.
+>2. In **production** mode, webpack bundles your files so that they are optimized for speed. This means the files are minified and organized to take up the least amount of memory. So, they are optimized for speed because these bundles are fast to download when a user visits the website online.
+>
+>This works great for smaller apps, but if you have a more extensive app, this approach is likely to affect your site’s speed. The longer it takes for a web app to load, the more likely the visitor will leave and move on to another unrelated website. There are several ways to tackle this issue of a large bundle.
+>One such approach is **code-splitting**, a practice where a module bundler like webpack splits the single bundle file into multiple bundles, which are then loaded on an as-needed basis. With the help of code-splitting, you can **lazy load** only the parts that the visitor to the app needs to have at any given time. This approach significantly reduces the download times and allows React-powered apps to get much better speeds.
+>An example of a viable alternative is **SSR (Server-side rendering)**. With SSR, React components are rendered to HTML on the server, and the visitor downloads the finished HTML code. An alternative to SSR is client-side rendering, which downloads the index.html file and then lets React inject its own code into a dedicated HTML element (the **root** element in `create-react-app`). In this course, you’ve only worked with client-side rendering.
+>Sometimes, you can combine client-side rendering and server-side rendering. This approach results in what’s referred to as **isomorphic apps**.
