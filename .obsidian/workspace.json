@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "5c0ebf9e0d7e6f08",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Ôn tập Thực Hành Kiến Trúc Máy Tính.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Ôn tập Thực Hành Kiến Trúc Máy Tính.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +101,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Ôn tập Thực Hành Kiến Trúc Máy Tính.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,9 +122,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Ôn tập Thực Hành Kiến Trúc Máy Tính.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -160,7 +143,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5c0ebf9e0d7e6f08",
+  "active": "047a22bd5ed2877c",
   "lastOpenFiles": [
     "React Basic - Meta Front-end Coursera/Week 3 - React Basic.md",
     "Ôn tập Thực Hành Kiến Trúc Máy Tính.md",
