@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "3c15cf73c73335c7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "List of PHP.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "List of PHP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "List of PHP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,7 +137,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "List of PHP.md"
+              }
             }
           }
         ]
@@ -143,9 +160,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "047a22bd5ed2877c",
+  "active": "3c15cf73c73335c7",
   "lastOpenFiles": [
     "React Basic - Meta Front-end Coursera/Week 3 - React Basic.md",
+    "List of PHP.md",
     "Ôn tập Thực Hành Kiến Trúc Máy Tính.md",
     "React Basic - Meta Front-end Coursera/Week 2 - React Basic.md",
     "Image Bank/Traditional_example.png",
