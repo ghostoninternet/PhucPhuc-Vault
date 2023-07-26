@@ -14,5 +14,7 @@
 >A file to store environment setup. Everything about the server that is running in the project, and many different values for different servers are setup right here.
 >**NOT RECOMMEND** to use environment variables all the time. But mostly for domain names, urls, authentication, mail addresses, service account names.
 
-# Composer JSON and lock file
+# Passing data to the views
+>**Compact function**: Creating an array of the variable with its value
 >
+>**with method**: Can only pass in one data at a time
