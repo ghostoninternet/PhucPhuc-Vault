@@ -12,3 +12,7 @@
 
 # What is the .env file
 >A file to store environment setup. Everything about the server that is running in the project, and many different values for different servers are setup right here.
+>**NOT RECOMMEND** to use environment variables all the time. But mostly for domain names, urls, authentication, mail addresses, service account names.
+
+# Composer JSON and lock file
+>
