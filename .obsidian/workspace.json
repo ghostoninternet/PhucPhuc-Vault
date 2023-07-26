@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cơ Sở Dữ Liệu/Chương 5 - Tối Ưu Hóa Câu Truy Vấn.md",
+                "file": "Cơ Sở Dữ Liệu/Chương 6 - An Toàn và Toàn Vẹn Dữ Liệu.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1e30165649ed057b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Đề thi CSDL IT3090.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +81,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e1628290df2af6d7",
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cơ Sở Dữ Liệu/Chương 5 - Tối Ưu Hóa Câu Truy Vấn.md",
+                "file": "Cơ Sở Dữ Liệu/Chương 6 - An Toàn và Toàn Vẹn Dữ Liệu.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cơ Sở Dữ Liệu/Chương 5 - Tối Ưu Hóa Câu Truy Vấn.md",
+                "file": "Cơ Sở Dữ Liệu/Chương 6 - An Toàn và Toàn Vẹn Dữ Liệu.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cơ Sở Dữ Liệu/Chương 5 - Tối Ưu Hóa Câu Truy Vấn.md"
+                "file": "Cơ Sở Dữ Liệu/Chương 6 - An Toàn và Toàn Vẹn Dữ Liệu.md"
               }
             }
           }
@@ -149,14 +162,16 @@
   },
   "active": "3c15cf73c73335c7",
   "lastOpenFiles": [
+    "Image Bank/Triangle Permission.png",
+    "Đề thi CSDL IT3090.md",
+    "Cơ Sở Dữ Liệu/Chương 6 - An Toàn và Toàn Vẹn Dữ Liệu.md",
+    "Cơ Sở Dữ Liệu/Chương 5 - Tối Ưu Hóa Câu Truy Vấn.md",
+    "Cơ Sở Dữ Liệu/Table of Content.md",
     "Image Bank/Rule no78910.png",
     "Image Bank/Rule no56.png",
     "Image Bank/Rule no234.png",
     "Image Bank/Rule no1.png",
     "Image Bank/Query Processing.png",
-    "Cơ Sở Dữ Liệu/Table of Content.md",
-    "Cơ Sở Dữ Liệu/Chương 5 - Tối Ưu Hóa Câu Truy Vấn.md",
-    "Untitled.md",
     "Laravel/Laravel Notes of Code with Dary Course.md",
     "Cơ Sở Dữ Liệu",
     "List of PHP.md",
@@ -174,7 +189,6 @@
     "Image Bank/Traditional_SPA_Lifecycle.png",
     "Image Bank/component_state.png",
     "Image Bank/React_nav_work.png",
-    "Image Bank/HTML_nav_work.png",
     "Introduction to Git and Github/Week 4.md",
     "Introduction to Git and Github/Introduction to Git and Github - Goolge Coursera.md",
     "JavaScript/F8/HTML DOM/DOM Events.md",
@@ -194,7 +208,6 @@
     "Introduction to Git and Github",
     "Obsidian First Try.md",
     "Chapter 1.md",
-    "Chapter 2.md",
     "Untitled.canvas"
   ]
 }
