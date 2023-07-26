@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cơ Sở Dữ Liệu/Chương 6 - An Toàn và Toàn Vẹn Dữ Liệu.md",
-                "mode": "source",
+                "file": "Cơ Sở Dữ Liệu/Chương 7 - Tổ Chức Dữ Liệu Vật Lý.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cơ Sở Dữ Liệu/Chương 6 - An Toàn và Toàn Vẹn Dữ Liệu.md",
+                "file": "Cơ Sở Dữ Liệu/Chương 7 - Tổ Chức Dữ Liệu Vật Lý.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cơ Sở Dữ Liệu/Chương 6 - An Toàn và Toàn Vẹn Dữ Liệu.md",
+                "file": "Cơ Sở Dữ Liệu/Chương 7 - Tổ Chức Dữ Liệu Vật Lý.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cơ Sở Dữ Liệu/Chương 6 - An Toàn và Toàn Vẹn Dữ Liệu.md"
+                "file": "Cơ Sở Dữ Liệu/Chương 7 - Tổ Chức Dữ Liệu Vật Lý.md"
               }
             }
           }
@@ -161,19 +161,22 @@
   },
   "active": "3c15cf73c73335c7",
   "lastOpenFiles": [
-    "Đề thi CSDL IT3090.md",
+    "Image Bank/B-tree.png",
+    "Image Bank/indexed-files.png",
+    "Image Bank/Hashed-file-example-2.png",
+    "Image Bank/Hashed-file-example-1.png",
+    "Image Bank/Heap-file-example.png",
+    "Cơ Sở Dữ Liệu/Table of Content.md",
+    "Cơ Sở Dữ Liệu/Chương 7 - Tổ Chức Dữ Liệu Vật Lý.md",
     "Cơ Sở Dữ Liệu/Chương 6 - An Toàn và Toàn Vẹn Dữ Liệu.md",
+    "Đề thi CSDL IT3090.md",
     "Image Bank/Trigger_example_2.png",
     "Image Bank/Trigger_example_1.png",
     "Image Bank/Example_of_Asertion.png",
     "Image Bank/Triangle Permission.png",
     "Cơ Sở Dữ Liệu/Chương 5 - Tối Ưu Hóa Câu Truy Vấn.md",
-    "Cơ Sở Dữ Liệu/Table of Content.md",
     "Image Bank/Rule no78910.png",
     "Image Bank/Rule no56.png",
-    "Image Bank/Rule no234.png",
-    "Image Bank/Rule no1.png",
-    "Image Bank/Query Processing.png",
     "Laravel/Laravel Notes of Code with Dary Course.md",
     "Cơ Sở Dữ Liệu",
     "List of PHP.md",
@@ -186,7 +189,6 @@
     "Introduction to Git and Github/Week 1.md",
     "Laravel",
     "Ôn tập Thực Hành Kiến Trúc Máy Tính.md",
-    "Image Bank/Traditional_example.png",
     "Introduction to Git and Github/Week 4.md",
     "Introduction to Git and Github/Introduction to Git and Github - Goolge Coursera.md",
     "JavaScript/F8/HTML DOM/DOM Events.md",
@@ -205,7 +207,6 @@
     "README.md",
     "Introduction to Git and Github",
     "Obsidian First Try.md",
-    "Chapter 1.md",
     "Untitled.canvas"
   ]
 }
