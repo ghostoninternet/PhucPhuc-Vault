@@ -9,3 +9,6 @@
 >	1. Store **Models directory**.
 >	2. Store **Http directory**, which contains **Controllers directory**.
 >**resources directory**: store **js directory**, **css directory**, and **views directory**.
+
+# What is the .env file
+>A file to store environment setup. Everything about the server that is running in the project, and many different values for different servers are setup right here.

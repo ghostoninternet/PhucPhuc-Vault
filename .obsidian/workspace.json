@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "List of PHP.md",
+                "file": "Laravel/Laravel Notes of Code with Dary Course.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "List of PHP.md",
+                "file": "Laravel/Laravel Notes of Code with Dary Course.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "List of PHP.md",
+                "file": "Laravel/Laravel Notes of Code with Dary Course.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "List of PHP.md"
+                "file": "Laravel/Laravel Notes of Code with Dary Course.md"
               }
             }
           }
@@ -174,8 +174,8 @@
   },
   "active": "8c9bb51afb13c2ab",
   "lastOpenFiles": [
-    "Laravel/Laravel Notes of Code with Dary Course.md",
     "List of PHP.md",
+    "Laravel/Laravel Notes of Code with Dary Course.md",
     "Introduction to Git and Github/Week 3.md",
     "Introduction to Git and Github/Week 2.md",
     "Introduction to Git and Github/Week 1.md",
