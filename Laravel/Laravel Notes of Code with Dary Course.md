@@ -18,3 +18,6 @@
 >**Compact function**: Creating an array of the variable with its value
 >
 >**with method**: Can only pass in one data at a time
+
+# Views
+>Two benefits come with blade are **template inheritance** and **sections**.
