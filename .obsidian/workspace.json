@@ -81,8 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e1628290df2af6d7",
@@ -162,9 +161,12 @@
   },
   "active": "3c15cf73c73335c7",
   "lastOpenFiles": [
-    "Image Bank/Triangle Permission.png",
     "Đề thi CSDL IT3090.md",
     "Cơ Sở Dữ Liệu/Chương 6 - An Toàn và Toàn Vẹn Dữ Liệu.md",
+    "Image Bank/Trigger_example_2.png",
+    "Image Bank/Trigger_example_1.png",
+    "Image Bank/Example_of_Asertion.png",
+    "Image Bank/Triangle Permission.png",
     "Cơ Sở Dữ Liệu/Chương 5 - Tối Ưu Hóa Câu Truy Vấn.md",
     "Cơ Sở Dữ Liệu/Table of Content.md",
     "Image Bank/Rule no78910.png",
@@ -185,10 +187,6 @@
     "Laravel",
     "Ôn tập Thực Hành Kiến Trúc Máy Tính.md",
     "Image Bank/Traditional_example.png",
-    "Image Bank/SPA_example.png",
-    "Image Bank/Traditional_SPA_Lifecycle.png",
-    "Image Bank/component_state.png",
-    "Image Bank/React_nav_work.png",
     "Introduction to Git and Github/Week 4.md",
     "Introduction to Git and Github/Introduction to Git and Github - Goolge Coursera.md",
     "JavaScript/F8/HTML DOM/DOM Events.md",
