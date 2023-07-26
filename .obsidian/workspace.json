@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Laravel/Laravel Notes of Code with Dary Course.md",
+                "file": "Cơ Sở Dữ Liệu/Chương 5 - Tối Ưu Hóa Câu Truy Vấn.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Laravel/Laravel Notes of Code with Dary Course.md",
+                "file": "Cơ Sở Dữ Liệu/Chương 5 - Tối Ưu Hóa Câu Truy Vấn.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Laravel/Laravel Notes of Code with Dary Course.md",
+                "file": "Cơ Sở Dữ Liệu/Chương 5 - Tối Ưu Hóa Câu Truy Vấn.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Laravel/Laravel Notes of Code with Dary Course.md"
+                "file": "Cơ Sở Dữ Liệu/Chương 5 - Tối Ưu Hóa Câu Truy Vấn.md"
               }
             }
           }
@@ -147,14 +147,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3c15cf73c73335c7",
+  "active": "047a22bd5ed2877c",
   "lastOpenFiles": [
+    "Image Bank/Query Processing.png",
+    "Cơ Sở Dữ Liệu/Table of Content.md",
+    "Cơ Sở Dữ Liệu/Chương 5 - Tối Ưu Hóa Câu Truy Vấn.md",
+    "Untitled.md",
+    "Laravel/Laravel Notes of Code with Dary Course.md",
+    "Cơ Sở Dữ Liệu",
     "List of PHP.md",
     "React Basic - Meta Front-end Coursera/Week 3 - React Basic.md",
     "React Basic - Meta Front-end Coursera/Week 2 - React Basic.md",
     "React Basic - Meta Front-end Coursera/Week 1 - React Basic.md",
     "React Basic - Meta Front-end Coursera/React Basic.md",
-    "Laravel/Laravel Notes of Code with Dary Course.md",
     "Introduction to Git and Github/Week 3.md",
     "Introduction to Git and Github/Week 2.md",
     "Introduction to Git and Github/Week 1.md",
@@ -189,9 +194,7 @@
     "Introduction to Git and Github",
     "Obsidian First Try.md",
     "Chapter 1.md",
-    "PhucPhuc-Vault",
     "Chapter 2.md",
-    "2023-07-12.md",
     "Untitled.canvas"
   ]
 }
