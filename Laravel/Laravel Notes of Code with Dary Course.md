@@ -22,3 +22,12 @@
 # Views
 >Two benefits come with blade are **template inheritance** and **sections**.
 >**@yield()**: define a section in a layout and it is used constantly used to get content from a child page into a master page.
+>
+>To insert image:
+>1. Use `URL(<image's path>)` inside the `src` of `<img>`. (An alternative: you can replace `URL` with `asset`, but you must store all your CSS, JS, image files inside **public** folder because this is the only place that `asset` will find.)
+>2. Use symbolic link: `php artisan storage:link`
+>	Using this method, you are saving all private images and documents in the storage directory which will give you full control over files and later on you can allow certain type of users to access the images or documents
+>
+>`@unless()`: The condition is the same as `@if (!condition)`
+>`@empty()`: Check if a variable is empty 
+>`@isset()`: Check if a variable has been set
