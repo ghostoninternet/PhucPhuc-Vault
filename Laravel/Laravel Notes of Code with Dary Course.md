@@ -21,3 +21,4 @@
 
 # Views
 >Two benefits come with blade are **template inheritance** and **sections**.
+>**@yield()**: define a section in a layout and it is used constantly used to get content from a child page into a master page.
