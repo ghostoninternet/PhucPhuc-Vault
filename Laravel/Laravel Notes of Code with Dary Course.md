@@ -31,3 +31,12 @@
 >`@unless()`: The condition is the same as `@if (!condition)`
 >`@empty()`: Check if a variable is empty 
 >`@isset()`: Check if a variable has been set
+
+# Databases and Migrations
+>**Eloquent** is an **ORM**.
+>**ORM** stand for **object relational mapper**. ORM allows you to write quries using the **object oriented paradigm**. 
+>
+>You can see migration as the version control for your database
+>`php artisan make:model <model name> -m`: create model and make migration
+>`php artisan migrate`: make migration
+>`php artisan migrate:install`: keep track
