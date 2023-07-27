@@ -47,4 +47,8 @@
 >**Factory Model**: A pattern for creating fake entries for our database tables 
 
 # Query Builder
->A fluent interface for interacting with several different types of databases with a single clear API
+>A fluent interface for interacting with several different types of databases with a single clear API --> possible to chain methods together to build a query
+
+# Introduction to Eloquent
+>**Eloquent** is an **ORM**.
+>**ORM** stand for **object relational mapper**. ORM allows you to write quries using the **object oriented paradigm**. It's a database abstraction layer that provides a single interface to interact with multiple database types. A single **eloquent class** is responsible for not only providing the ability to **interact with the table as a wool** but also **representing an individual table row**.
