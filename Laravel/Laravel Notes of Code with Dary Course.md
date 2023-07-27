@@ -37,6 +37,14 @@
 >**ORM** stand for **object relational mapper**. ORM allows you to write quries using the **object oriented paradigm**. 
 >
 >You can see migration as the version control for your database
->`php artisan make:model <model name> -m`: create model and make migration
+>`php artisan make:model <model name> -m`: create model (table) and make migration
 >`php artisan migrate`: make migration
->`php artisan migrate:install`: keep track
+>`php artisan migrate:install`: keep track of which migrations you have or haven't run
+>`php artisan migrate:reset`: call **down()** method
+>`php artisan migrate:refresh`: roll back every database migration you've run on this instance and then runs every migration available
+
+# Factory Model
+>**Factory Model**: A pattern for creating fake entries for our database tables 
+
+# Query Builder
+>A fluent interface for interacting with several different types of databases with a single clear API
