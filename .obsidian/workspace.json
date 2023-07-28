@@ -32,6 +32,18 @@
             }
           },
           {
+            "id": "6f4dfbe28e08a385",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lịch Sử Đảng.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "1e30165649ed057b",
             "type": "leaf",
             "state": {
@@ -44,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -110,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "List of PHP.md",
+                "file": "Lịch Sử Đảng.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "List of PHP.md",
+                "file": "Lịch Sử Đảng.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "List of PHP.md"
+                "file": "Lịch Sử Đảng.md"
               }
             }
           }
@@ -172,8 +184,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "193d6a0a38e7dc2b",
+  "active": "6f4dfbe28e08a385",
   "lastOpenFiles": [
+    "List of PHP.md",
+    "Lịch Sử Đảng.md",
     "Laravel/Laravel Notes of Code with Dary Course.md",
     "Tóm tắt các thuật toán.md",
     "Cơ Sở Dữ Liệu/Chương 7 - Tổ Chức Dữ Liệu Vật Lý.md",
@@ -192,7 +206,6 @@
     "Cơ Sở Dữ Liệu/Chương 5 - Tối Ưu Hóa Câu Truy Vấn.md",
     "Image Bank/Rule no78910.png",
     "Cơ Sở Dữ Liệu",
-    "List of PHP.md",
     "React Basic - Meta Front-end Coursera/Week 3 - React Basic.md",
     "React Basic - Meta Front-end Coursera/Week 2 - React Basic.md",
     "React Basic - Meta Front-end Coursera/Week 1 - React Basic.md",
@@ -219,7 +232,6 @@
     "Image Bank",
     "README.md",
     "Introduction to Git and Github",
-    "Obsidian First Try.md",
     "Untitled.canvas"
   ]
 }
