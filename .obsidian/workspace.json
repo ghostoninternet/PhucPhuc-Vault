@@ -25,8 +25,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Laravel/Laravel Notes of Code with Dary Course.md",
-                "mode": "source",
+                "file": "List of PHP.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Laravel/Laravel Notes of Code with Dary Course.md",
+                "file": "List of PHP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Laravel/Laravel Notes of Code with Dary Course.md",
+                "file": "List of PHP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Laravel/Laravel Notes of Code with Dary Course.md"
+                "file": "List of PHP.md"
               }
             }
           }
@@ -174,8 +174,8 @@
   },
   "active": "193d6a0a38e7dc2b",
   "lastOpenFiles": [
-    "Tóm tắt các thuật toán.md",
     "Laravel/Laravel Notes of Code with Dary Course.md",
+    "Tóm tắt các thuật toán.md",
     "Cơ Sở Dữ Liệu/Chương 7 - Tổ Chức Dữ Liệu Vật Lý.md",
     "Image Bank/B-tree.png",
     "Image Bank/indexed-files.png",
