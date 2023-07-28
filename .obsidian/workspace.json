@@ -20,6 +20,18 @@
             }
           },
           {
+            "id": "193d6a0a38e7dc2b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tóm tắt các thuật toán.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "1e30165649ed057b",
             "type": "leaf",
             "state": {
@@ -31,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Laravel/Laravel Notes of Code with Dary Course.md",
+                "file": "Tóm tắt các thuật toán.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Laravel/Laravel Notes of Code with Dary Course.md",
+                "file": "Tóm tắt các thuật toán.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Laravel/Laravel Notes of Code with Dary Course.md"
+                "file": "Tóm tắt các thuật toán.md"
               }
             }
           }
@@ -159,8 +172,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3c15cf73c73335c7",
+  "active": "193d6a0a38e7dc2b",
   "lastOpenFiles": [
+    "Laravel/Laravel Notes of Code with Dary Course.md",
+    "Tóm tắt các thuật toán.md",
     "Cơ Sở Dữ Liệu/Chương 7 - Tổ Chức Dữ Liệu Vật Lý.md",
     "Image Bank/B-tree.png",
     "Image Bank/indexed-files.png",
@@ -176,7 +191,6 @@
     "Image Bank/Triangle Permission.png",
     "Cơ Sở Dữ Liệu/Chương 5 - Tối Ưu Hóa Câu Truy Vấn.md",
     "Image Bank/Rule no78910.png",
-    "Laravel/Laravel Notes of Code with Dary Course.md",
     "Cơ Sở Dữ Liệu",
     "List of PHP.md",
     "React Basic - Meta Front-end Coursera/Week 3 - React Basic.md",
