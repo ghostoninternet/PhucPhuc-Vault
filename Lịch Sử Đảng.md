@@ -31,5 +31,18 @@
 >**11/1924**: Người tới **Quảng Châu** --> Xúc tiến các công việc tổ chức hội nghị thành lập Đảng Cộng Sản
 
 >**6/1925**: Người sáng lập hội **VN Cách Mạng Thanh Niên**.
->>Truyền bá tư tưởng Mác Le-
+>>Truyền bá chủ nghĩa Mác Lê-nin sâu rộng
+>>
+>>Mở các lớp huẩn luyện chính trị, gửi thanh niên ưu tú học tại nước ngoài
+>>
+>>Thực hiện chủ trương **"vô sản văn hóa"** --> giác ngộ giai cấp công nhân, truyền bá tư tưởng chủ nghĩa Mác Lê-nin
+>
+>--> Sự hình của 3 tổ chức **Đông Dương Cộng Sản Đảng**, **An Nam Cộng Sản Đảng**, **Đông Dương Công Sản liên đoàn**. Hoạt động mạnh nhưng riêng rẽ
+>
+>**03-07/1930**: Diễn ra hội nghị hợp nhất các tổ chức Cộng Sản tại Cửu Long, Hương Cảng, Trung Quốc
+>
+>Thành lập Đảng Cộng Sản. Hội nghĩ đã thông qua **Chính cương vắn tắt, Sách lược vắn tắt, Chương trình tóm tắt và Điều lệ vắn tắt** do NAQ soạn thảo. Đây là **Cương lĩnh chính trị đầu tiên** của Đảng.
 ### 3. Ý nghĩa
+>Đảng CSVN ra đời là một tất yếu lịch sử, là kết quả của sự sàng lọc khắt khe của chính lịch sử.
+>Đảng ra đời là sản phẩm của sự kết hợp giữa chủ nghĩa Mác – Lênin với phong trào công nhân và phong trào yêu nước
+>Đảng ra đời còn là kết quả của sự chuẩn bị tích cực, chu đáo, sáng tạo của lãnh tụ Nguyễn Ái Quốc
