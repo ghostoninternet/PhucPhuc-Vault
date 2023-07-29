@@ -90,5 +90,33 @@
 >>>>**"mỗi người dân là một chiến sĩ, mỗi đường phố là một mặt trận, mỗi làng xã là một pháo đài giặc"**. Quân đội làm nòng cốt cho toàn dân đánh giặc.
 >>>>"Bất kỳ người đàn ông, đàn bà, bất kỳ người già, người trẻ, không chia đảng phái, tôn giáo dân tộc. Hễ là người Việt Nam phải đứng lên đánh thực dân Pháp để cứu Tổ Quốc. Ai có súng dùng súng, ai có gươm dùng gươm, không có súng có gươm thì dùng cuốc thuổng, gậy, gộc. Ai cũng phải ra sức chống thực dân Pháp cứu nước..."
 >>>
->>>
->>**Toàn diện**: là đánh địch trên mọi lĩnh vực, mọi mặt trận không chỉ bằng **quân sự** mà c
+>>
+>**Toàn diện**: là đánh địch trên mọi lĩnh vực, mọi mặt trận không chỉ bằng **quân sự** mà cả về **chính trị**, **kinh tế**, **ngoại giao**, **văn hóa**, **tư tưởng**, trong đó mặt trận quân sự, đấu tranh vũ trang giữ vai trò tiên phong, mang tính quyết định. 
+>>>>**Về chính trị**: đoàn kết toàn dân
+>>>>**Về quân sự**:  thực hiện vũ trang toàn dân, xây dựng lực lượng vũ trang nhân dân, tiêu diệt địch, giải phóng nhân dân và đất đai.
+>>>>**Về kinh tế**: tự cung tự cấp, phát triển nông nghiệp, thủ công nghiệp, thương mại, công nghiệp quốc phòng.
+>>>>**Về văn hóa**: xóa bỏ văn hóa thực dân phong kiến, xây dựng mới theo 3 nguyên tắc: **dân tộc, khoa học và đại chúng**.
+>>>>**Về ngoại giao**: thêm bạn bớt thù, sẵn sàng đàm phán nếu Pháp công nhận Việt Nam độc lập.
+>>
+>**Lâu dài**: Tư tưởng chỉ đạo chiến lược của Đảng trong bối cảnh lực lượng tương quan ban đầu giữa VN và thực dân Pháp quá chênh lệch.
+>>>>**Pháp** mạnh về vật chất, yếu về tính phi nghĩa của việc đem quân đi xâm lược
+>>>>**Việt Nam** yếu về vật chất, mạnh về tinh thần --> chọn đánh lâu dài để xây dựng, chuyển hóa tương quan lực lượng, phá chiến lược **đánh nhanh thắng nhanh**. Khi lực lượng mạnh, đẩy mạnh các cuộc tấn công quy mô lớn. 
+>
+>>**Tự lực cánh sinh**: 
+>>>>Xuất phát từ điều kiện quốc tế bất lợi, chưa có nước nào công nhận, đặt quan hệ ngoại giao --> Đảng ta xác định dựa vào sức mình là chính
+>>>>		Con đường **duy nhất** lúc bấy giờ là phải tự lực, tự cường, tự cấp, tự túc về mọi mặt, dựa vào nhân dân, phát huy nguồn lực vật chất. VN luôn đề cao và tranh thủ sự giúp đỡ của mọi nước, kết hợp hiệu quả sức mạnh trong nước với sự hỗ trợ quốc tế.
+>
+>**Triển vọng kháng chiến**: mặc dù lâu dài, gian khổ, khó khăn song nhất định thắng lợi.
+
+
+### 3. Ý nghĩa:
+> Đường lối kháng chiến công bố sớm cho thấy sự chủ động, không bất ngờ trước tình hình. Mang lại niềm tin cho toàn Đảng, toàn dân vào thắng lợi của cuộc kháng chiến.
+
+# Câu 9. Nội dung Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội ở Việt Nam do Đại hội 11 thông qua (bổ sung, phát triển Cương lĩnh năm 1991)?
+### 1. Hoàn cảnh lịch sử 
+### 2. Những định hướng lớn về phát triển kinh tế
+>Nền kinh tế định hướng XHCN, kinh tế nhà nước giữ vai trò chủ đạo
+>Bình đẳng trước pháp luật
+>
+### 3. Những định hướng lớn về phát triển văn hóa, xã hội
+### 4. Ý nghĩa
