@@ -112,11 +112,51 @@
 ### 3. Ý nghĩa:
 > Đường lối kháng chiến công bố sớm cho thấy sự chủ động, không bất ngờ trước tình hình. Mang lại niềm tin cho toàn Đảng, toàn dân vào thắng lợi của cuộc kháng chiến.
 
-# Câu 9. Nội dung Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội ở Việt Nam do Đại hội 11 thông qua (bổ sung, phát triển Cương lĩnh năm 1991)?
+# Câu 9: Nội dung Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội ở Việt Nam do Đại hội 11 thông qua (bổ sung, phát triển Cương lĩnh năm 1991)?
 ### 1. Hoàn cảnh lịch sử 
+>Đại hội lần thứ 11 của Đảng diễn ra vào tháng 1/2011 trong bối cảnh xu thế hòa bình hợp tác và phát triển là xu thế chính của thế giới.
+>Sau 20 năm thực hiện Cương lĩnh xây dựng đất nước trong thời kỳ quá độ đi lên CNXH, đất nước đã đạt được nhiều thành tựu song cũng đứng trước những khó khăn, thách thức mới.
+>Đại hội thông qua Cương lĩnh xây dựng đất nước trong thời kỳ quá độ đi lên CNXH (bổ sung, phát triển năm 2011) để tiếp tục phát triển đất nước toàn diện và bền vững.
 ### 2. Những định hướng lớn về phát triển kinh tế
 >Nền kinh tế định hướng XHCN, kinh tế nhà nước giữ vai trò chủ đạo
 >Bình đẳng trước pháp luật
->
+>Coi phát triển kinh tế là nhiệm vụ trung tâm, gắn với phát triển kinh tế tri thức, bảo vệ tài nguyên môi trường. 
+>Xây dựng nền kinh tế độc lập, đồng thời chủ động
 ### 3. Những định hướng lớn về phát triển văn hóa, xã hội
+>Xây dựng nền văn hóa tiên tiến, đậm đà bản sắc dân tộc, thấm nhuần tinh thần nhân văn, dân chủ, tiến bộ
+>Xây dựng con người Việt Nam giàu lòng yêu nước, có ý thức làm chủ, có trách nhiệm công dân, có tri thức, sức khỏe, lao động giởi, sống có văn hóa, có tinh thần quốc tế chân chính.
+>Coi phát triển giáo dục và đào tạo cùng với phát triển khoa học và công nghệ là quốc sách hàng đầu.
+>Kết hợp tăng trưởng kinh tế với tiến bộ xã hội.
+>Xây dựng một cộng đồng xã hội văn minh, trong đó các giai cấp, tầng lớp dân cư đoàn kết, bình đẳng về nghĩa vụ và quyền lợi.
+>Thực hiện chính sách bình đẳng, đoàn kết, tôn trọng và giúp đỡ nhau giữa các dân tộc.
+>Tôn trọng và bảo đảm quyền tự do tín ngưỡng, tôn giáo theo quy định của pháp luật.
 ### 4. Ý nghĩa
+>Cương lĩnh có ý nghĩa quan trọng về lý luận và thực tiễn, là sự vận dụng sáng tạo chủ nghĩa Mác – Lênin và tư tưởng Hồ Chí Minh, thể hiện nhận thức mới về CNXH và con đường đi lên CNXH
+>Là cơ sở đoàn kết, thống nhất giữa tư tưởng và hành động vì sự nghiệp xây dựng đất nước từng bước quá độ lên CNXH.
+
+
+# Câu 7: Hoàn cảnh lịch sử, nội dung và ý nghĩa đường lối kháng chiến chống Mỹ cứu nước của Đảng thể hiện trong Hội nghị lần thứ 11 (3-1965) và lần thứ 12 (12-1965)?
+### 1. Hoàn cảnh lịch sử
+> Thất bại **chiến tranh đặc biệt** --> **chiến tranh cục bộ**
+> **Hội nghị TW Đảng lần thứ 11**: quyết tâm đánh thắng Mỹ, đề ra đường lối kháng chiến chống Mỹ.
+### 2. Nội dung
+>Đường lối kháng chiến:
+>> **Quyết tâm chiến lược**: Trung Ương khẳng định nước ta đủ điều kiện và sức mạnh để thắng Mỹ. Với tinh thần **"Quyết tâm đánh thắng giặc xâm lược Mỹ"**, phát động cuộc kháng chiến chống Mỹ.
+>> 
+>>**Mục tiêu của chiến lược**: kiên quyết đánh bại cuộc chiến xâm lược của đế quốc Mỹ trong bất kỳ tình huống nào
+>>
+>>**Phương châm chiến lược**: đánh lâu dài, dựa vào sức mình là chính, tập trung lực lượng 2 miền để mở những cuộc tiến công lớn
+>>
+>>**Tư tưởng chỉ đạo đối với miền Nam**: giữ vững và phát triển thế tiến công, kiên quyết tiến công và liên tục tiến công. Kết hợp đấu tranh quân sự với đấu tranh chính trị
+>>
+>>**Tư tưởng chỉ đạo đối với miền Bắc**: chuyển hướng xây dựng kinh tế, bảo đảm vững mạnh về kinh tế và quốc phòng trong điều kiện có chiến tranh, tiến hành chiến tranh nhân dân, chi viện cho miền Nam, đề phòng chiến tranh cục bộ mở rộng.
+>>
+>>**Với mối quan hệ và nhiệm vụ Cách Mạng của cả 2 miền**: 
+>>>>*Thứ nhất*: quan hệ nhiệm vụ bảo vệ miền Bắc và giải phóng miền Nam
+>>>>*Thứ hai*: đánh bại cuộc chiến tranh phá hoại ở miền Bắc, tập trung xây dựng miền Bắc để chi viện cho miền Nam.
+>>>
+>>>
+>>>Hai nhiệm vụ trên **không tách rời nhau**. Khẩu hiệu chung "Tất cả để đánh thắng giặc Mỹ xâm lược".
+>>>
+### 3.Ý Nghĩa
+> Thể hiện quyết tâm đánh Mỹ và thắng Mỹ, tinh thần cách mạng tiến công, tinh thần độc lập tự chủ, kiên trì với mục tiêu cách mạng.
