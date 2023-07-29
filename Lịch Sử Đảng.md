@@ -73,3 +73,22 @@
 >>
 >>Xác định giai cấp **vô sản** và **nông dân** là hai động lực chính của cách mạng **tư sản dân quyền**, trong đó giai cấp vô sản là động lực chính và mạnh, là giai cấp lãnh đạo cách mạng, nông dân có số lượng đông đảo nhất, là một động lực mạnh của cách mạng, còn những giai cấp và tầng lớp khác ngoài công nông như **tư sản thương nghiệp** thì đứng về phía đế quốc **chống cách mạng**, còn **tư sản công nghiệp** thì đứng về phía quốc gia cải lương và khi cách mạng phát triển cao thì họ sẽ theo đế quốc. ⇒ Không đề ra được một chiến lược liên minh dân tộc và giai cấp rộng rãi trong cuộc đấu tranh chống đế quốc xâm lược và tay sai.
 
+# Câu 5: Nguyên nhân bùng nổ và nội dung đường lối kháng chiến chống thực dân Pháp xâm lược 1946-1954?
+### 1. Hoàn cảnh lịch sử
+>Pháp vi phạm Hiệp định sơ bộ, Tạm ước đã kí kết
+>Chúng ta càng nhân nhược, Pháp càng lấn tới, toàn Đảng toàn dân quyết tâm kháng chiến
+>--> **Đêm 19/12/1946**, tại **Pháo Đài Láng**, cuộc kháng chiến toàn quốc bùng nổ
+### 2. Nội dung đường lối kháng chiến
+>**Cơ sở của đường lối**:
+>>Dựa theo thực tiễn Cách Mạng Việt Nam từ năm 1945 đến năm 1947
+>>Đường lối thể hiện trong nhiều văn kiện của Đảng: **Lời kêu gọi "Toán quốc kháng chiến" của Hồ Chủ Tịch 20/12/1946**, **Chị thị "Toàn dân kháng chiến" của Trung Ương Đảng ngày 22/12/1946**.
+>
+>**Mục đích kháng chiến**: Đáng đuổi thực dân Pháp, hoàn thành độc lập dân tộc, từng bước xây dựng chế độ mới.
+>**Tính chất cuộc kháng chiến**: chiến tranh nhân dân bảo vệ Tổ Quốc
+>**Phương châm đường lối kháng chiến:**
+>>**Toàn dân**: là đem toàn bộ sức dân, tài dân, lực dân, động viên toàn dân tham gia cuộc chiến kháng chiến
+>>>>**"mỗi người dân là một chiến sĩ, mỗi đường phố là một mặt trận, mỗi làng xã là một pháo đài giặc"**. Quân đội làm nòng cốt cho toàn dân đánh giặc.
+>>>>"Bất kỳ người đàn ông, đàn bà, bất kỳ người già, người trẻ, không chia đảng phái, tôn giáo dân tộc. Hễ là người Việt Nam phải đứng lên đánh thực dân Pháp để cứu Tổ Quốc. Ai có súng dùng súng, ai có gươm dùng gươm, không có súng có gươm thì dùng cuốc thuổng, gậy, gộc. Ai cũng phải ra sức chống thực dân Pháp cứu nước..."
+>>>
+>>>
+>>**Toàn diện**: là đánh địch trên mọi lĩnh vực, mọi mặt trận không chỉ bằng **quân sự** mà c
