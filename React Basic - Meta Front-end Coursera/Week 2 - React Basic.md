@@ -1,5 +1,5 @@
 # Dynamic events and how to handle them
->The process by which the HTML button communicates to the JS event handler to execute some code and respond to the event action is known as triggering.
+>The process by which the HTML button communicates to the JS event handler to execute some code and respond to the event action is known as **triggering**.
 >
 >In **React code**, events are handled using **JSX event attributes**, which are very similar to HTML event attributes. Example:
 >			`<HTML>onclick` = `<JSX>onClick`
@@ -14,12 +14,40 @@
 >* Animation events
 >* ... and more !
 
+## Event handling and embedded expressions
+>There are different ways to embed expressions in event handlers in React:
+>- With an inline anonymous ES5 function
+>- With an inline, anonymous ES6 function (an arrow function)
+>- Using a separate function declaration
+>- Using a separate function expression
+>
+
 ## JavaScript
 >1. "Plug into" HTML element on which to listen for an event.
 >2. Use `addEventListener` method on the document object.
 ## React
-> In React, the rule is to avoid manipulating the DOM directly as much as possible. You should set everything up declaratively. This is best done using event attribute, one-to-one mapping between HTML event attributes and JSX event attributes, but note that there is no function invocation syntax. Instead, you should pass a reference to the event handling function without invoking it.
-> 
+> In React, the rule is to avoid manipulating the DOM directly as much as possible. You should set everything up declaratively, meaning you describe the updates to React and let it figure out the rest. This is best done using event attribute, one-to-one mapping between HTML event attributes and JSX event attributes, but note that there is **no function invocation syntax**. Instead, you should **pass a reference to the event handling function** without invoking it. For example:
+
+```HTML
+<button onclick="handleClick()"> Click me </button>
+<script>
+	function handleClick() {
+		console.log("Clicked!")
+	}
+</script>
+```
+
+```JavaScript
+function Btn() {
+	const handleClick = () => console.log("Clicked !")
+}
+return(
+	<div>
+		<button onClick={handleClick}> Click me </button>
+	</div>
+)
+```
+
 > One more feature only using React is the passing of function declarations as props.
 
 # Data and Events
@@ -47,16 +75,17 @@
 >**state data**: Data inside the components that it controls and can mutate.
 
 ## Hooks
->One key benefit of hooks is that they solve the problem of unnecessary code reuse across components.
+>One **key benefit** of hooks is that they solve the problem of unnecessary code reuse across components.
 >
 >**HOOKS**: functions that let you hook into **React state** and lifecycle features from components.
->**useState hook**: this hook is used to manage the state within a component and keep track of it.
+>`useState` **hook**: this hook is used to manage the state within a component and keep track of it.
 >	1. Import the **useState** `import React, {useState} from 'react'`
 >	2. Declare a **state variable** `const [state, setState] = useState(initialState)`
 >	3. Provide any name `const [showMenu, setShowMenu] = useState(false)` 
+>		The `useState(false)` return a pair which is an array with two items.
 >Calling **useState** will do two things:
->1. Create a state variable with an initial value --> `showMenu`
->2. Creates a function to set that state variable's value --> `setShowMenu` 
+>1. Create a state variable with an initial value --> `showMenu` that represents the current state
+>2. Creates a function to set that state variable's value --> `setShowMenu`, this function is used to update the value of `showMenu` bypassing 
 >**useState** hook should be called at the top level of your component. You can use this hook to track any kind of data: string, number, arrays, Booleans or objects.
 >
 >Hooks also come with a set of rules, that you need to follow while using them:
