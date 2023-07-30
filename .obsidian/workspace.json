@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "193d6a0a38e7dc2b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "React Basic - Meta Front-end Coursera/Week 3 - React Basic.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "React Basic - Meta Front-end Coursera/Week 3 - React Basic.md",
+                "file": "Laravel/Laravel Notes of Code with Dary Course.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "React Basic - Meta Front-end Coursera/Week 3 - React Basic.md",
+                "file": "Laravel/Laravel Notes of Code with Dary Course.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "React Basic - Meta Front-end Coursera/Week 3 - React Basic.md"
+                "file": "Laravel/Laravel Notes of Code with Dary Course.md"
               }
             }
           }
@@ -160,10 +147,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "193d6a0a38e7dc2b",
+  "active": "3c15cf73c73335c7",
   "lastOpenFiles": [
-    "React Basic - Meta Front-end Coursera/Week 2 - React Basic.md",
     "React Basic - Meta Front-end Coursera/Week 3 - React Basic.md",
+    "React Basic - Meta Front-end Coursera/Week 2 - React Basic.md",
     "React Basic - Meta Front-end Coursera/Week 1 - React Basic.md",
     "React Basic - Meta Front-end Coursera/React Basic.md",
     "List of PHP.md",

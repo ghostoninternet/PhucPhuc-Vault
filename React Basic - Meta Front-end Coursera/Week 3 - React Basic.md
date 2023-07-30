@@ -7,16 +7,27 @@
 >4. The footer navigation menu is usually displayed as several visual columns containing links. 
 >![[HTML_nav_work.png]]
 >![[React_nav_work.png]]
->React router library:
-> `import {BrowserRouter} from 'react-router-dom';` (Inside `index.js`)
-> Inside `index.js`: `<BrowserRouter> <App/> </BrowserRouter>`
-> 
-> `import {Routes, Route, Link} from 'react-router-dom'`; (Inside `App.js` component)
-> `<Link to="Write the path name" className="Write the class name"> Write the context </Link>`
-> 
-> `<Routes> <Route path="Write the path name" element={<Component Name/>}></Route> </Routes>`
-> 
->--> A library that gives you more control over the routing of component.
+
+```JavaScript
+/*Inside index.js*/
+import {BrowserRouter} from 'react-router-dom';
+<BrowserRouter> 
+	<App/> 
+</BrowserRouter>
+```
+
+```JavaScript
+/*Inside App.js Component*/
+import {Routes, Route, Link} from 'react-router-dom';
+<Link to="Write the path name" className="Write the class name"> 
+	Write the context 
+</Link>
+<Routes>
+	<Route path="Write the path name" element={<Component Name/>}/>
+</Routes>
+```
+
+>`ReactRouter`--> A library that gives you more control over the routing of component.
 
 ### Multi-page application
 >Before the advent of modern JavaScript frameworks, most websites were implemented as multi-page applications. That is, when a user clicks on a link, the browser navigates to a new webpage, sends a request to the web server; this then responds with the full webpage and the new page is displayed in the browser.
@@ -45,8 +56,36 @@
 # Using Assets in React
 
 ### How to use assets ?
->1. Import an asset
->2. Use an asset (**name reference** or **path reference** (must use **require(asset path)** ))
+>1. Import an asset `import cat from './assets/images/cat.jpg'`
+>2. Use an asset (**name reference** or **path reference** (with path reference must use **require(asset path)** ))
+
+```JavaScript
+/* name reference */
+import cat from './assets/images/cat.jpg'
+
+function showAnimal() {
+	return(
+		<div>
+			<img src={cat} alt="A picture of cat"/>
+		</div>
+	);
+}
+export default showAnimal;
+```
+
+```JavaScript
+/* path reference */
+import cat from './assets/images/cat.jpg'
+
+function showAnimal() {
+	return(
+		<div>
+			<img src={require('./assets/images/cat.jpg')} alt="A picture of cat"/>
+		</div>
+	);
+}
+export default showAnimal;
+```
 
 >The app’s files will likely be bundled when working with a React app. Bundling is a process that takes all the imported files in an app and joins them into a single file, referred to as a **bundle**. Several tools can perform this bundling. **webpack** is the built-in tool for the `create-react-app`. Simply put, **webpack** is a module bundler. Practically, this means that it will take various kinds of files, such as SVG and image files, CSS and SCSS files, JavaScript files, and TypeScript files, and it will bundle them together so that a browser can understand that bundle and work with it.
 >
