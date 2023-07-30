@@ -15,9 +15,9 @@
 **Render syntax**: `<ComponentName/>`
 ![[React_pic1.png]]
 
->**React** uses a special syntax called **JavaScript XML** or **JSX**. JSX syntax looks very similar to **HTML**. Think JSX as a combination of **custom HTML** and **JavaScript**. You can place this syntax inside the **return function** of a functional component. **React component** must be used as a JSX element.
+>**React** uses a special syntax called **JavaScript XML** or **JSX**, this is a syntax extension to JavaScript. JSX syntax looks very similar to **HTML**. Think JSX as a combination of **custom HTML** and **JavaScript**. You can place this syntax inside the **return function** of a functional component. **React component** must be used as a JSX element.
 
->The **first letter** of the name of a component file must be **Capitalize**. This is because there's a difference in how **React** treats capitalized and non capitalized component names. **React** treat lowercase component as **regular HTML elements**. Capitalize component names help **React** to distinguish **JSX element** from **HTML element**.
+>The **first letter** of the name of **a component file** must be **Capitalize**. This is because there's a difference in how **React** treats capitalized and non capitalized component names. **React** treat lowercase component as **regular HTML elements**. Capitalize component names help **React** to distinguish **JSX element** from **HTML element**.
 >The first letter of the name of the function inside **App.js** must also be capitalized. 
 
 >**Transpiling**: Interpreting a programming language and translating it to a specific target language. Using this, **React** can convert JSX to HTML.
@@ -35,6 +35,9 @@
 >**The root folder**:
 >**package.json**: lists information pertaining to my app, which allows **npm** to run several scripts and perform various tasks in the app itself. 
 >**package-loc.json**: holds the list of all dependencies with a specific versions. The **package-loc.json** file help **npm** rebuild the app on another machine
+
+>**DISCUSSION**: Why use the `className` attribute in the **JSX** syntax ?
+>>>While regular HTML does indeed have a `class` attribute, which is used to list one or more CSS classes to be used on a given HTML element, this cannot really work in JSX. The reason is that **JSX is a special kind of JavaScript syntax**, and the word `class` is a **reserved keyword in JSX**. That's why the React team had to make a compromise and so className is used in JSX to list one or more CSS classes to be used on a given element or component.
 
 >**Modules**: Stand-alone units of code that you can re-use again and again.
 >**export**: make a module available in another module.

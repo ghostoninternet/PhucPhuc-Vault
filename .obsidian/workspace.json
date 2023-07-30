@@ -25,38 +25,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "List of PHP.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6f4dfbe28e08a385",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Lịch Sử Đảng.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1e30165649ed057b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Đề thi CSDL IT3090.md",
+                "file": "React Basic - Meta Front-end Coursera/Week 1 - React Basic.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -122,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lịch Sử Đảng.md",
+                "file": "React Basic - Meta Front-end Coursera/Week 1 - React Basic.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lịch Sử Đảng.md",
+                "file": "React Basic - Meta Front-end Coursera/Week 1 - React Basic.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lịch Sử Đảng.md"
+                "file": "React Basic - Meta Front-end Coursera/Week 1 - React Basic.md"
               }
             }
           }
@@ -184,12 +160,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6f4dfbe28e08a385",
+  "active": "193d6a0a38e7dc2b",
   "lastOpenFiles": [
+    "React Basic - Meta Front-end Coursera/Week 2 - React Basic.md",
+    "React Basic - Meta Front-end Coursera/Week 1 - React Basic.md",
+    "React Basic - Meta Front-end Coursera/React Basic.md",
     "List of PHP.md",
+    "Tóm tắt các thuật toán.md",
+    "Đề thi CSDL IT3090.md",
     "Lịch Sử Đảng.md",
     "Laravel/Laravel Notes of Code with Dary Course.md",
-    "Tóm tắt các thuật toán.md",
     "Cơ Sở Dữ Liệu/Chương 7 - Tổ Chức Dữ Liệu Vật Lý.md",
     "Image Bank/B-tree.png",
     "Image Bank/indexed-files.png",
@@ -198,7 +178,6 @@
     "Image Bank/Heap-file-example.png",
     "Cơ Sở Dữ Liệu/Table of Content.md",
     "Cơ Sở Dữ Liệu/Chương 6 - An Toàn và Toàn Vẹn Dữ Liệu.md",
-    "Đề thi CSDL IT3090.md",
     "Image Bank/Trigger_example_2.png",
     "Image Bank/Trigger_example_1.png",
     "Image Bank/Example_of_Asertion.png",
@@ -207,9 +186,6 @@
     "Image Bank/Rule no78910.png",
     "Cơ Sở Dữ Liệu",
     "React Basic - Meta Front-end Coursera/Week 3 - React Basic.md",
-    "React Basic - Meta Front-end Coursera/Week 2 - React Basic.md",
-    "React Basic - Meta Front-end Coursera/Week 1 - React Basic.md",
-    "React Basic - Meta Front-end Coursera/React Basic.md",
     "Introduction to Git and Github/Week 3.md",
     "Introduction to Git and Github/Week 2.md",
     "Introduction to Git and Github/Week 1.md",
