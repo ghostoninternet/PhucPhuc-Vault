@@ -85,7 +85,7 @@ return(
 >		The `useState(false)` return a pair which is an array with two items.
 >Calling **useState** will do two things:
 >1. Create a state variable with an initial value --> `showMenu` that represents the current state
->2. Creates a function to set that state variable's value --> `setShowMenu`, this function is used to update the value of `showMenu` bypassing 
+>2. Creates a function to set that state variable's value --> `setShowMenu`, this function is used to update the value of `showMenu` by passing Boolean value to it `setShowMenu(true)`
 >**useState** hook should be called at the top level of your component. You can use this hook to track any kind of data: string, number, arrays, Booleans or objects.
 >
 >Hooks also come with a set of rules, that you need to follow while using them:
