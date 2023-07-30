@@ -107,6 +107,7 @@ return(
 
 ## Context API
 ![[contextAPI_props.png]]
+>
 >**Context API** provides a streamline way to work with context in **React**
 >
 >Context Provider: Components that stores the state.
