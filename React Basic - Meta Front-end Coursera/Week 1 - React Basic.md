@@ -55,7 +55,7 @@
 ### React Props
 >1. Pass data between components
 >2. Arguments are passed like HTML attributes
->3. Uses the keyword props
+>3. Uses the keyword `props`
 >4. Send multiple data types
 >5. Flexible dynamic content
 >When two components communicate with each other, the component **sending** the **props** data is known as **the parent** and the component receiving the data is known as **the child**. It's also possible for parent components to send the same data to multiple child components. This communication is **one-directional** data flow.
@@ -65,17 +65,29 @@
 ### JSX
 >Allow developers to write HTML directly inside the JavaScript code.
 >**NOTE**: A regular JS function is used to define how **React** should render the component wherever it's referenced using the JSX syntax.
+>Inside JSX syntax, you can use `{}` as a special areas where you can write **JavaScript** code.
+>The return area can be thought of as the area of expressive syntax that allows you to write **regular HTML code**. It is also important to note that the **HTML code must be wrapped in a top level element**. If you don't want to add more element to your DOM, you can use something called a fragment `<> </>` instead to wrapped the HTML content. 
 >
 >To style a JSX element, we have 3 ways:
 >1. We can add `className` attribute to tag in the function components. In the **index.html** file, at the head of it, add a `<linK>` element, and link it to a CSS file. Inside the CSS file, use `className` attribute to access the element that we need to style
 >2. Another way to add CSS styles to components is using **inline styles**. The inline style is a bit custom. Use the following format:
->			`style={{CSS attribute = "value of CSS attribute", ....}}`
+>			`style={{CSS attribute:"value of CSS attribute", ....}}`
 >	The CSS attribute must be in **camelCased** (for example: font-size --> fontSize). The value must be inside double quotes.
->	The part `{CSS attribute = "value of CSS attribute", ....}` is called **style object literal**.
+>	The part `{CSS attribute:"value of CSS attribute", ....}` is called **style object literal**.
 >3. The final way is similar to the second way, but now we move **style object literal** into a value of a variable.
 
 ### Props and children
 >`props.children`: a special prop that is automatically passed to every component.
+>
+>**Finding the right amount of modularization**:
+>>>Imagine, for example, that you had a number of small bags, and that each bag could only carry a single apple or pear. You'd end up having to wrap each "apple" inside a "bag". That doesn't make much sense. You can think about components making your layouts modular in a similar way. You don't want to have an entire layout contained in a single component, because that would be very difficult to work with. On the flip side, if you made each HTML element in your layout a separate component, that would make it very hard to work with, although such layout would be modular. So it's all about moderation. You need to organize your layouts by splitting them into meaningful areas of the page, and then code those meaningful areas as separate components. that would constitute the right amount of modularity. To reinforce this point, It might help to think of it in terms of how a person would describe a website: there's a menu, a footer, the shopping cart, etc.
+
+### JSX syntax and the arrow function
+>You write React component by using 
+>>**function declaration**
+>>**function expression**
+>>**arrow function**
+>the same as writing a regular function in JavaScript. Theb behavior of the component when using different function syntax is unchange.
 
 ### Embedded Expressions
 >Allow JavaScript values to be inserted into HTML of React element. 
