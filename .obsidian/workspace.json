@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/F8/HTML DOM/DOM Attribute.md",
+                "file": "Introduction to Git and Github/Week 3.md",
                 "mode": "preview",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/F8/HTML DOM/DOM Attribute.md",
+                "file": "Introduction to Git and Github/Week 3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/F8/HTML DOM/DOM Attribute.md",
+                "file": "Introduction to Git and Github/Week 3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/F8/HTML DOM/DOM Attribute.md"
+                "file": "Introduction to Git and Github/Week 3.md"
               }
             }
           }
@@ -162,19 +162,21 @@
   },
   "active": "d895470e30f3184e",
   "lastOpenFiles": [
+    "Introduction to Git and Github/Week 2.md",
+    "Introduction to Git and Github/Week 1.md",
+    "Introduction to Git and Github/Introduction to Git and Github - Goolge Coursera.md",
+    "React Basic - Meta Front-end Coursera/Week 2 - React Basic.md",
+    "React Basic - Meta Front-end Coursera/Week 1 - React Basic.md",
+    "Trả lời câu hỏi Git.md",
+    "JavaScript/F8/HTML DOM/DOM Attribute.md",
     "JavaScript/F8/HTML DOM/DOM Events.md",
     "JavaScript/F8/HTML DOM/Get Elements Methods.md",
     "JavaScript/F8/HTML DOM/DOM Text.md",
-    "JavaScript/F8/HTML DOM/DOM Attribute.md",
     "JavaScript/HTML DOM Knowledge/HTML Collection and NodeList.md",
-    "Trả lời câu hỏi Git.md",
     "List of PHP.md",
-    "Introduction to Git and Github/Week 2.md",
     "Introduction to Git and Github/Week 3.md",
     "Laravel/Laravel Notes of Code with Dary Course.md",
     "React Basic - Meta Front-end Coursera/Week 3 - React Basic.md",
-    "React Basic - Meta Front-end Coursera/Week 2 - React Basic.md",
-    "React Basic - Meta Front-end Coursera/Week 1 - React Basic.md",
     "React Basic - Meta Front-end Coursera/React Basic.md",
     "Tóm tắt các thuật toán.md",
     "Đề thi CSDL IT3090.md",
@@ -194,11 +196,9 @@
     "Cơ Sở Dữ Liệu/Chương 5 - Tối Ưu Hóa Câu Truy Vấn.md",
     "Image Bank/Rule no78910.png",
     "Cơ Sở Dữ Liệu",
-    "Introduction to Git and Github/Week 1.md",
     "Laravel",
     "Ôn tập Thực Hành Kiến Trúc Máy Tính.md",
     "Introduction to Git and Github/Week 4.md",
-    "Introduction to Git and Github/Introduction to Git and Github - Goolge Coursera.md",
     "React Basic - Meta Front-end Coursera",
     "JavaScript/F8/HTML DOM/HTML DOM.md",
     "JavaScript/HTML DOM Knowledge",
