@@ -12,7 +12,10 @@ Có 2 loại branch:
 ## 2. Cách xóa một branch
 **Xóa một branch phía local**
 - Cách 1: `git branch --delete <branch_name>` hoặc `git branch -d <branch_name>`
+Xóa branch nếu như branch không có thay đổi nào chưa merge
 - Cách 2: `git branch --delete --force <branch_name>` hoặc `git branch -D <branch_name>`
+Xóa branch ngay cả khi branch có thay đổi chưa merge
+
 **Xóa một branch phía remote**:
 `git push <remote_name> --delete <branch_name>`
 Chú ý: Phải check out ra branch cùng tên với branch trên remote thì mới xóa được. Ví dụ như khi ta đang ở branch `dev` thì ta không thể xóa branch `main` trên remote.
@@ -64,5 +67,30 @@ git cherry-pick feature-A~1
 # Hoặc chúng ta có thể chỉ định hash commit
 git cherry-pick C2
 ```
+--> Đưa thay đổi của commit C2 thuộc branch feature-A vào branch master
 
+**Lấy n commits từ 1 branch bỏ vào master**
+```Git
+# Nếu muốn thêm 1 vài commit, không liên tục
+git cherry-pick commit_id1 commit_id3
+
+# Nếu muốn thêm 1 loạt commit lần lượt cạnh nhau
+git cherry-pick commit_id1...commit_id5
+
+# Với code trên, thì  commit_id1 sẽ ko được thêm vào
+# Để đưa commit được tính vào trong branch muốn thêm thì 
+git cherry-pick commit_id1^..commit_id5
+```
+
+**1 lần commit cho cả 2 branches**
+```Git
+# Đang ở branch-X, thực hiện commit để tạo ra commit A
+git add -A
+git commit -m " finish commit A"
+
+# Checkout sang branch Y và dùng cherry-pick nào
+git checkout branch-Y
+git cherry-pick branch-X
+```
+Với lệnh này, cherry-pick sẽ lấy commit cuối cùng ở branch-X và merge vào branch-Y.
 ## 11. Git Flow
