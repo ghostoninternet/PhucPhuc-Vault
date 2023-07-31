@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Trả lời câu hỏi Git.md",
+                "file": "JavaScript/F8/HTML DOM/DOM Attribute.md",
                 "mode": "preview",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Trả lời câu hỏi Git.md",
+                "file": "JavaScript/F8/HTML DOM/DOM Attribute.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Trả lời câu hỏi Git.md",
+                "file": "JavaScript/F8/HTML DOM/DOM Attribute.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Trả lời câu hỏi Git.md"
+                "file": "JavaScript/F8/HTML DOM/DOM Attribute.md"
               }
             }
           }
@@ -162,10 +162,15 @@
   },
   "active": "d895470e30f3184e",
   "lastOpenFiles": [
-    "Introduction to Git and Github/Week 2.md",
+    "JavaScript/F8/HTML DOM/DOM Events.md",
+    "JavaScript/F8/HTML DOM/Get Elements Methods.md",
+    "JavaScript/F8/HTML DOM/DOM Text.md",
+    "JavaScript/F8/HTML DOM/DOM Attribute.md",
+    "JavaScript/HTML DOM Knowledge/HTML Collection and NodeList.md",
     "Trả lời câu hỏi Git.md",
-    "Introduction to Git and Github/Week 3.md",
     "List of PHP.md",
+    "Introduction to Git and Github/Week 2.md",
+    "Introduction to Git and Github/Week 3.md",
     "Laravel/Laravel Notes of Code with Dary Course.md",
     "React Basic - Meta Front-end Coursera/Week 3 - React Basic.md",
     "React Basic - Meta Front-end Coursera/Week 2 - React Basic.md",
@@ -194,13 +199,8 @@
     "Ôn tập Thực Hành Kiến Trúc Máy Tính.md",
     "Introduction to Git and Github/Week 4.md",
     "Introduction to Git and Github/Introduction to Git and Github - Goolge Coursera.md",
-    "JavaScript/F8/HTML DOM/DOM Events.md",
     "React Basic - Meta Front-end Coursera",
-    "JavaScript/F8/HTML DOM/DOM Text.md",
-    "JavaScript/F8/HTML DOM/DOM Attribute.md",
-    "JavaScript/F8/HTML DOM/Get Elements Methods.md",
     "JavaScript/F8/HTML DOM/HTML DOM.md",
-    "JavaScript/HTML DOM Knowledge/HTML Collection and NodeList.md",
     "JavaScript/HTML DOM Knowledge",
     "Image Bank/pic_htmltree.gif.crdownload",
     "JavaScript/F8/HTML DOM",
