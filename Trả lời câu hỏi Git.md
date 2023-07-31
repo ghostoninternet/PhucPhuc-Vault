@@ -10,7 +10,7 @@ Có 2 loại branch:
 - Branch remote: là branch lưu ở remote. Branch này có thể fetch về local thông qua lệnh `git fetch`, nhưng không tạo thêm branch ở local. Để hiển thị branch remote có trên local dùng lệnh `git branch -r`
 
 ## 2. Cách xóa một branch
-**Xóa một branch phía local
+**Xóa một branch phía local**
 - Cách 1: `git branch --delete <branch_name>` hoặc `git branch -d <branch_name>`
 - Cách 2: `git branch --delete --force <branch_name>` hoặc `git branch -D <branch_name>`
 **Xóa một branch phía remote**:
@@ -18,3 +18,51 @@ Có 2 loại branch:
 Chú ý: Phải check out ra branch cùng tên với branch trên remote thì mới xóa được. Ví dụ như khi ta đang ở branch `dev` thì ta không thể xóa branch `main` trên remote.
 
 ## 3. Làm thế nào để push một branch ở local lên remote dưới một cái tên khác
+`git push <remote_name> <local_branch>:<remote_branch>`
+
+## 4. Thế nào là git rebase. Phân biệt rebase với merge
+
+## 5. Thế nào là git fetch. Phân biệt fetch với pull
+`git fetch`: copy tất cả các sự thay đổi trên remote repository lên remote branch để ta có thể nhìn được người khác đã thay đổi những gì mà không merge ngay lập tức
+`git pull`: thu hết toàn bộ các thay đổi trên remote repository và merge ngay lập tức.
+## 6. Thế nào là git stash
+Git stash được sử dụng khi bạn muốn lưu toàn bộ các thay đổi trên branch hiện tại nhưng chưa commit. Câu lệnh này rất hữu dụng khi bạn đang làm dở công việc ở branch hiện tại nhưng cần đổi sang để làm công việc ở branch khác.
+Để lưu toàn bộ nội dung công việc đang dở, sử dụng lệnh `git stash save` hoặc `git stash`
+Một số lệnh với stash:
+- Xem danh sách stash: `git stash list`
+- Apply stash gần nhất và xóa stash đó: `git stash pop`
+- Apply stash: `git stash apply stash@{<index>}`
+- Xem nội dung stash: `git stash show stash@{<index>}`
+- Xóa stash: `git stash drop stash@{<index>}`
+- Xóa toàn bộ stash: `git stash clear`
+## 7. Làm thế nào xoá bỏ trạng thái của một vài commit gần đây
+Có 2 cách để thực hiện công việc này:
+- Cách 1: `git revert <commit_id>`
+		Lệnh này tạo commit đảo ngược commit có commit_id đã chọn, commit chỉ định bị xóa bỏ, các commit mới hơn vẫn được giữ nguyên.
+- Cách 2: `git reset --hard <commit_id>`
+		Lệnh này xóa toàn bộ các commit trước đó và đưa branch về trạng thái của commit có commit_id đã chọn.
+## 8. Làm thế nào để gộp một vài commit thành 1 commit duy nhất
+Để gộp nhiều commit thành 1 commit duy nhất, ta có thể sử dụng:
+- Cách 1: `git rebase -i <id_commit_end>`
+- Cách 2: `git rebase -i HEAD~<index>`
+`<id_commit_end>` là id của commit cuối trong nhóm cần gộp. `<index>` là số commit cần gộp. Ta có các lựa chọn pick | squash | fixup các commit trước khi save.
+## 9. Phân biệt git reset, git reset --hard, git reset --soft
+**git reset**: `git reset <commit_id>`
+Di chuyển HEAD về vị trí commit reset, các thay đổi của file vẫn được giữ nguyên nhưng bị loại khỏi stage
+**git reset --hard**: `git reset --hard <commit_id>`
+Di chuyển HEAD về vị trí commit reset và loại bỏ các thay đổi của file tính từ sau vị trí commit reset
+**git reset --soft**: `git reset --soft <commit_id>`
+Lệnh này chỉ di chuyển HEAD về vị trí commit reset, các thay đổi của file và trạng thái của stage vẫn được giữ nguyên
+## 10. Thế nào là cherry-pick, khi nào thì dùng cherry-pick
+Khi chúng ta muốn lấy **1 hay n commits từ 1 branch bỏ vào 1 branch khác** hay **commit 1 lần lên 2 branch** thì nên sử dụng **cherry-pick**. **Git cherry-pick** là một cách để checkout 1 commit bất kỳ tại 1 branch được chỉ định về branch hiện tại. Hay chính là cherry-pick sẽ bốc commit của 1 branch nào đó và áp dụng vào branch hiện tại. Chúng ta có các trường hợp sau:
+**Lấy 1 commit từ 1 branch bỏ vào branch master**
+```Git
+git checkout master
+
+git cherry-pick feature-A~1
+
+# Hoặc chúng ta có thể chỉ định hash commit
+git cherry-pick C2
+```
+
+## 11. Git Flow
