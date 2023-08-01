@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Laravel/Laravel Training/Routes.md",
+                "file": "Laravel/Laravel Training/Middleware.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Laravel/Laravel Training/Routes.md",
+                "file": "Laravel/Laravel Training/Middleware.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Laravel/Laravel Training/Routes.md",
+                "file": "Laravel/Laravel Training/Middleware.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Laravel/Laravel Training/Routes.md"
+                "file": "Laravel/Laravel Training/Middleware.md"
               }
             }
           }
@@ -149,8 +149,9 @@
   },
   "active": "1c2b12aa756a36dc",
   "lastOpenFiles": [
-    "Laravel/Laravel Notes of Code with Dary Course.md",
     "Laravel/Laravel Training/Routes.md",
+    "Laravel/Laravel Training/Middleware.md",
+    "Laravel/Laravel Notes of Code with Dary Course.md",
     "Laravel/Laravel Training",
     "Introduction to Git and Github/Week 2.md",
     "Learning Docker/Docker - Hỏi Dân IT/Bài 1 - Docker Là Gì.md",
@@ -182,7 +183,6 @@
     "Image Bank/Hashed-file-example-1.png",
     "Image Bank/Heap-file-example.png",
     "Cơ Sở Dữ Liệu/Table of Content.md",
-    "Cơ Sở Dữ Liệu/Chương 6 - An Toàn và Toàn Vẹn Dữ Liệu.md",
     "Image Bank/Trigger_example_2.png",
     "Image Bank/Trigger_example_1.png",
     "Image Bank/Example_of_Asertion.png",
