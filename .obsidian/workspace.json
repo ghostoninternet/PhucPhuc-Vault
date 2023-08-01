@@ -13,13 +13,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Laravel/Laravel Training/Controllers.md",
+                "file": "Advanced React - Meta Front-end Coursera/Week 1 - Advanced React.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "10fe96f64cef26a7",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.3.7"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +96,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Laravel/Laravel Training/Controllers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +112,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Laravel/Laravel Training/Controllers.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +133,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Laravel/Laravel Training/Controllers.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -147,25 +154,30 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1c2b12aa756a36dc",
+  "active": "10fe96f64cef26a7",
   "lastOpenFiles": [
-    "Laravel/Laravel Training/Middleware.md",
+    "Advanced React - Meta Front-end Coursera/Week 1 - Advanced React.md",
+    "Image Bank/Diffing Algo.png",
+    "Advanced React - Meta Front-end Coursera/Advanced React.md",
+    "Introduction to Git and Github/Week 1.md",
+    "React Basic - Meta Front-end Coursera/Week 3 - React Basic.md",
+    "React Basic - Meta Front-end Coursera/Week 2 - React Basic.md",
+    "React Basic - Meta Front-end Coursera/Week 1 - React Basic.md",
+    "React Basic - Meta Front-end Coursera/React Basic.md",
     "Laravel/Laravel Training/Controllers.md",
+    "Advanced React - Meta Front-end Coursera",
+    "Laravel/Laravel Training/Middleware.md",
     "Laravel/Laravel Training/Routes.md",
     "Laravel/Laravel Notes of Code with Dary Course.md",
     "Laravel/Laravel Training",
     "Introduction to Git and Github/Week 2.md",
     "Learning Docker/Docker - Hỏi Dân IT/Bài 1 - Docker Là Gì.md",
     "Learning Docker/Docker - Hỏi Dân IT/Docker Cơ Bản.md",
-    "React Basic - Meta Front-end Coursera/Week 3 - React Basic.md",
     "Learning Docker/Docker - Hỏi Dân IT",
     "Learning Docker/Untitled.md",
     "Learning Docker",
-    "React Basic - Meta Front-end Coursera/Week 2 - React Basic.md",
     "Introduction to Git and Github/Week 3.md",
-    "Introduction to Git and Github/Week 1.md",
     "Introduction to Git and Github/Introduction to Git and Github - Goolge Coursera.md",
-    "React Basic - Meta Front-end Coursera/Week 1 - React Basic.md",
     "Trả lời câu hỏi Git.md",
     "JavaScript/F8/HTML DOM/DOM Attribute.md",
     "JavaScript/F8/HTML DOM/DOM Events.md",
@@ -173,11 +185,7 @@
     "JavaScript/F8/HTML DOM/DOM Text.md",
     "JavaScript/HTML DOM Knowledge/HTML Collection and NodeList.md",
     "List of PHP.md",
-    "React Basic - Meta Front-end Coursera/React Basic.md",
     "Tóm tắt các thuật toán.md",
-    "Đề thi CSDL IT3090.md",
-    "Lịch Sử Đảng.md",
-    "Cơ Sở Dữ Liệu/Chương 7 - Tổ Chức Dữ Liệu Vật Lý.md",
     "Image Bank/B-tree.png",
     "Image Bank/indexed-files.png",
     "Image Bank/Hashed-file-example-2.png",
@@ -187,14 +195,12 @@
     "Image Bank/Trigger_example_1.png",
     "Image Bank/Example_of_Asertion.png",
     "Image Bank/Triangle Permission.png",
-    "Image Bank/Rule no78910.png",
     "Cơ Sở Dữ Liệu",
     "Laravel",
     "React Basic - Meta Front-end Coursera",
     "JavaScript/HTML DOM Knowledge",
     "Image Bank/pic_htmltree.gif.crdownload",
     "JavaScript/F8/HTML DOM",
-    "JavaScript/F8",
     "Untitled.canvas"
   ]
 }
