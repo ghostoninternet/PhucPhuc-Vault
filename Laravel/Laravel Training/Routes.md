@@ -6,3 +6,10 @@
 ## Required Parameter
 ## Optional Parameter
 ## Regular Expression Parameter
+# Named Routes
+# Route Groups
+# Route Model Binding
+## Implicit Binding
+## Implicit Enum Binding
+## Explicit Binding
+
