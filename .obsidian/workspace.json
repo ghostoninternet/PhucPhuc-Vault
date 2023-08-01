@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "d41c65b6d44e9ab9",
+        "id": "ec3c57a3b63b584f",
         "type": "tabs",
         "children": [
           {
-            "id": "c4afffdcf1e26246",
+            "id": "1c2b12aa756a36dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Introduction to Git and Github/Week 2.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d895470e30f3184e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Learning Docker/Docker - Hỏi Dân IT/Bài 1 - Docker Là Gì.md",
+                "file": "Laravel/Laravel Training/Routes.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Learning Docker/Docker - Hỏi Dân IT/Bài 1 - Docker Là Gì.md",
+                "file": "Laravel/Laravel Training/Routes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Learning Docker/Docker - Hỏi Dân IT/Bài 1 - Docker Là Gì.md",
+                "file": "Laravel/Laravel Training/Routes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Learning Docker/Docker - Hỏi Dân IT/Bài 1 - Docker Là Gì.md"
+                "file": "Laravel/Laravel Training/Routes.md"
               }
             }
           }
@@ -160,17 +147,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "047a22bd5ed2877c",
+  "active": "1c2b12aa756a36dc",
   "lastOpenFiles": [
-    "Learning Docker/Docker - Hỏi Dân IT/Docker Cơ Bản.md",
+    "Laravel/Laravel Notes of Code with Dary Course.md",
+    "Laravel/Laravel Training/Routes.md",
+    "Laravel/Laravel Training",
+    "Introduction to Git and Github/Week 2.md",
     "Learning Docker/Docker - Hỏi Dân IT/Bài 1 - Docker Là Gì.md",
+    "Learning Docker/Docker - Hỏi Dân IT/Docker Cơ Bản.md",
     "React Basic - Meta Front-end Coursera/Week 3 - React Basic.md",
     "Learning Docker/Docker - Hỏi Dân IT",
     "Learning Docker/Untitled.md",
     "Learning Docker",
     "React Basic - Meta Front-end Coursera/Week 2 - React Basic.md",
     "Introduction to Git and Github/Week 3.md",
-    "Introduction to Git and Github/Week 2.md",
     "Introduction to Git and Github/Week 1.md",
     "Introduction to Git and Github/Introduction to Git and Github - Goolge Coursera.md",
     "React Basic - Meta Front-end Coursera/Week 1 - React Basic.md",
@@ -181,7 +171,6 @@
     "JavaScript/F8/HTML DOM/DOM Text.md",
     "JavaScript/HTML DOM Knowledge/HTML Collection and NodeList.md",
     "List of PHP.md",
-    "Laravel/Laravel Notes of Code with Dary Course.md",
     "React Basic - Meta Front-end Coursera/React Basic.md",
     "Tóm tắt các thuật toán.md",
     "Đề thi CSDL IT3090.md",
@@ -198,7 +187,6 @@
     "Image Bank/Trigger_example_1.png",
     "Image Bank/Example_of_Asertion.png",
     "Image Bank/Triangle Permission.png",
-    "Cơ Sở Dữ Liệu/Chương 5 - Tối Ưu Hóa Câu Truy Vấn.md",
     "Image Bank/Rule no78910.png",
     "Cơ Sở Dữ Liệu",
     "Laravel",
@@ -207,7 +195,6 @@
     "Image Bank/pic_htmltree.gif.crdownload",
     "JavaScript/F8/HTML DOM",
     "JavaScript/F8",
-    "JavaScript",
     "Untitled.canvas"
   ]
 }
