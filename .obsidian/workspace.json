@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Laravel/Laravel Training/Middleware.md",
+                "file": "Laravel/Laravel Training/Controllers.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Laravel/Laravel Training/Middleware.md",
+                "file": "Laravel/Laravel Training/Controllers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Laravel/Laravel Training/Middleware.md",
+                "file": "Laravel/Laravel Training/Controllers.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Laravel/Laravel Training/Middleware.md"
+                "file": "Laravel/Laravel Training/Controllers.md"
               }
             }
           }
@@ -149,8 +149,9 @@
   },
   "active": "1c2b12aa756a36dc",
   "lastOpenFiles": [
-    "Laravel/Laravel Training/Routes.md",
     "Laravel/Laravel Training/Middleware.md",
+    "Laravel/Laravel Training/Controllers.md",
+    "Laravel/Laravel Training/Routes.md",
     "Laravel/Laravel Notes of Code with Dary Course.md",
     "Laravel/Laravel Training",
     "Introduction to Git and Github/Week 2.md",
@@ -182,7 +183,6 @@
     "Image Bank/Hashed-file-example-2.png",
     "Image Bank/Hashed-file-example-1.png",
     "Image Bank/Heap-file-example.png",
-    "Cơ Sở Dữ Liệu/Table of Content.md",
     "Image Bank/Trigger_example_2.png",
     "Image Bank/Trigger_example_1.png",
     "Image Bank/Example_of_Asertion.png",
