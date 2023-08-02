@@ -23,3 +23,11 @@ In order to create **controlled component**, you need to use a combination of **
 
 ![[uncontrolled_controlled.png]]
 
+| Reference |
+| ----------- |
+| https://formik.org/ |
+| https://github.com/jquense/yup |
+| https://github.com/react-hook-form/react-hook-form |
+
+# React Context
+
