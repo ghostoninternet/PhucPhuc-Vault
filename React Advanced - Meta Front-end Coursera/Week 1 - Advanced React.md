@@ -31,3 +31,6 @@ In order to create **controlled component**, you need to use a combination of **
 
 # React Context
 
+## Context API
+> Provides an alternative way to pass data through the component tree without having to pass props down manually at every level. It is the right tool when you need to share data that can be considered a global for a tree of React components.
+
