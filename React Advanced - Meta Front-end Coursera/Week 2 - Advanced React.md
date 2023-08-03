@@ -1,5 +1,6 @@
 # Getting Started with Hooks
 
+--- 
 # Rules of Hooks and Fetching Data with Hooks
 
 There are 4 rules of hooks:
@@ -17,5 +18,12 @@ There are 4 rules of hooks:
 
 Fetching data from a third-party API is considered **a side-effect** when working with React. Being a side-effect, you need to use the **useEffect hook** to deal with using the Fetch API calls in React.
 
+--- 
 # Advanced Hooks
 **useReducer hook**: A superpower useState. An useState hook gets an initial state. **useReducer** hook gets **initial state** and **reducer function**. This is benificial because the second argument of the reducer function is the **action object**. This object has **multiple type values** and based on each of these types values you can invoke the **dispatch function** to perform a specific operation. 
+
+> A **custom hook** is simply a way to **extract a piece of functionality** that you can use again and again. Put differently, you can code a custom hook when you want to **avoid duplication** or when you do not want to build a piece of functionality from scratch across multiple React projects. By coding a custom hook, you can create a reliable and streamlined way to reuse a piece of functionality in your React apps.
+> 
+> **How to name a custom hook ?**: A custom hook needs to have a name that begins with `use`.
+
+--- 
