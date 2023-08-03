@@ -16,3 +16,6 @@ There are 4 rules of hooks:
 > **Single-thread execution**: it means the next step can't start unless the previous step has finished.
 
 Fetching data from a third-party API is considered **a side-effect** when working with React. Being a side-effect, you need to use the **useEffect hook** to deal with using the Fetch API calls in React.
+
+# Advanced Hooks
+**useReducer hook**: A superpower useState. An useState hook gets an initial state. **useReducer** hook gets **initial state** and **reducer function**. This is benificial because the second argument of the reducer function is the **action object**. This object has **multiple type values** and based on each of these types values you can invoke the **dispatch function** to perform a specific operation. 
