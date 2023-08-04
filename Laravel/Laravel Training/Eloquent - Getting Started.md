@@ -121,3 +121,39 @@ Eloquent also offers advanced subquery support, which allows you to pull informa
 
 `findOrFail` and `firstOrFail` methods: retrieve the first result of the query; however, if no result is found, an `Illuminate\Database\Eloquent\ModelNotFoundException` will be thrown
 
+### Retrieving Or Creating Models
+`firstOrCreate` method: locate a database record using the given column / value pairs. If the model can not be found in the database, a record will be inserted with the attributes resulting from merging the first array argument with the optional second array argument.
+
+`firstOrNew` method: attempt to locate a record in the database matching the given attributes. However, if a model is not found, a new model instance will be returned. Note that the model returned by `firstOrNew` has not yet been persisted to the database. You will need to manually call the `save` method to persist it.
+
+### Retrieving Aggregates
+When interacting with Eloquent models, you may also use the `count`, `sum`, `max`, and other [aggregate methods](https://laravel.com/docs/10.x/queries#aggregates) provided by the Laravel [query builder](https://laravel.com/docs/10.x/queries)
+
+# Inserting and Updating Models
+### Insert
+To insert a new record into the database, you should instantiate a new model instance and set attributes on the model. Then, call the `save` method on the model instance
+
+Alternatively, you may use the `create` method to "save" a new model using a single PHP statement. The inserted model instance will be returned to you by the `create` method. However, before using the `create` method, you will need to specify either a `fillable` or `guarded` property on your model class.
+### Updates
+To update a model, you should retrieve it and set any attributes you wish to update. Then, you should call the model's `save` method. Again, the `updated_at`
+timestamp will automatically be updated, so there is no need to manually set its value
+#### Mass updates
+```PHP
+Flight::where('active', 1)
+
+->where('destination', 'San Diego')
+
+->update(['delayed' => 1]);
+```
+The `update` method expects an array of column and value pairs representing the columns that should be updated. The `update` method returns the number of affected rows.
+#### Examining Attribute Changes
+`isDirty`, `isClean`, and `wasChanged` methods: examine the internal state of your model and determine how its attributes have changed from when the model was originally retrieved
+
+>`isDirty` method: determines if any of the model's attributes have been changed since the model was retrieved. ou may pass a specific attribute name or an array of attributes to the `isDirty` method to determine if any of the attributes are "dirty". 
+>
+>`isClean` method: determine if an attribute has remained unchanged since the model was retrieved. This method also accepts an optional attribute argument
+>
+>`wasChanged` method: determines if any attributes were changed when the model was last saved within the current request cycle. If needed, you may pass an attribute name to see if a particular attribute was changed.
+
+`getOriginal` method: returns an array containing the original attributes of the model regardless of any changes to the model since it was retrieved.  If needed, you may pass a specific attribute name to get the original value of a particular attribute.
+
