@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React Advanced - Meta Front-end Coursera/Week 1 - Advanced React.md",
+                "file": "Laravel/Laravel Training/Eloquent - Getting Started.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "React Advanced - Meta Front-end Coursera/Week 1 - Advanced React.md",
+                "file": "Laravel/Laravel Training/Eloquent - Getting Started.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "React Advanced - Meta Front-end Coursera/Week 1 - Advanced React.md",
+                "file": "Laravel/Laravel Training/Eloquent - Getting Started.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "React Advanced - Meta Front-end Coursera/Week 1 - Advanced React.md"
+                "file": "Laravel/Laravel Training/Eloquent - Getting Started.md"
               }
             }
           }
@@ -159,9 +159,10 @@
   },
   "active": "1c2b12aa756a36dc",
   "lastOpenFiles": [
+    "React Advanced - Meta Front-end Coursera/Week 1 - Advanced React.md",
+    "Laravel/Laravel Training/Eloquent - Getting Started.md",
     "React Advanced - Meta Front-end Coursera/Week 2 - Advanced React.md",
     "React Advanced - Meta Front-end Coursera/Advanced React.md",
-    "React Advanced - Meta Front-end Coursera/Week 1 - Advanced React.md",
     "Image Bank/uncontrolled_controlled.png",
     "Image Bank/Diffing Algo.png",
     "Introduction to Git and Github/Week 1.md",
@@ -190,7 +191,6 @@
     "JavaScript/F8/HTML DOM/DOM Text.md",
     "JavaScript/HTML DOM Knowledge/HTML Collection and NodeList.md",
     "List of PHP.md",
-    "Tóm tắt các thuật toán.md",
     "Image Bank/B-tree.png",
     "Image Bank/indexed-files.png",
     "Image Bank/Hashed-file-example-2.png",
