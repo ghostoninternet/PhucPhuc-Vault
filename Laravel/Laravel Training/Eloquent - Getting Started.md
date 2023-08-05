@@ -98,7 +98,6 @@ $flight->number; // "FR 900"
 
 ### Collection
 Eloquent methods like `all` and `get` don't return a plain PHP array, instead, an instance of `Illuminate\Database\Eloquent\Collection` is returned.
-
 ### Chunking Result
 `chunk` method: process large numbers of models more efficiently. The `chunk` method will retrieve a subset of Eloquent models, passing them to a closure for processing. Since only the current chunk of Eloquent models is retrieved at a time, the `chunk` method will provide significantly reduced memory usage when working with a large number of models
 The first argument passed to the `chunk` method is the number of records you wish to receive per "chunk". The closure passed as the second argument will be invoked for each chunk that is retrieved from the database. A database query will be executed to retrieve each chunk of records passed to the closure.
