@@ -283,7 +283,7 @@ $flights = Flight::onlyTrashed()
 					->get();
 ```
 # Pruning Models
-Sometimes you may want to periodically delete models that are no longer needed. To accomplish this, you may add the `Illuminate\Database\Eloquent\Prunable` or `Illuminate\Database\Eloquent\MassPrunable` trait to the models you would like to periodically prune. After adding one of the traits to the model, implement a `prunable` method which returns an Eloquent query builder that resolves the models that are no longer needed.
+Sometimes you may want to **periodically delete models that are no longer needed**. To accomplish this, you may add the `Illuminate\Database\Eloquent\Prunable` or `Illuminate\Database\Eloquent\MassPrunable` trait to the models you would like to periodically prune. After adding one of the traits to the model, implement a `prunable` method which returns an Eloquent query builder that resolves the models that are no longer needed.
 
 `pruning` method: This method will be called before the model is deleted. This method can be useful for deleting any additional resources associated with the model, such as stored files, before the model is permanently removed from the database
 
@@ -298,12 +298,209 @@ protected function schedule(Schedule $schedule): void
 }
 ```
 
+If your models are in a different location, you may use the `--model` option to specify the model class names:
+```PHP
+$schedule->command('model:prune', [
+	'--model' => [Address::class, Flight::class],
+])->daily();
+```
 
-
+If you wish to exclude certain models from being pruned while pruning all other detected models, you may use the `--except` option:
+```PHP
+$schedule->command('model:prune', [
+	'--except' => [Address::class, Flight::class],
+])->daily();
+```
+#### Mass Pruning
+When models are marked with the `Illuminate\Database\Eloquent\MassPrunable` trait, models are deleted from the database using mass-deletion queries. Therefore, the `pruning` method will not be invoked, nor will the `deleting` and `deleted` model events be dispatched. This is because the models are never actually retrieved before deletion, thus making the pruning process much more efficient.
 # Replicating Models
+You may create an unsaved copy of an existing model instance using the `replicate` method. This method is particularly useful when you have model instances that share many of the same attributes.
+```PHP
+use App\Models\Address;
+
+$shipping = Address::create([
+	'type' => 'shipping',
+	'line_1' => '123 Example Street',
+	'city' => 'Victorville',
+	'state' => 'CA',
+	'postcode' => '90001',
+]);
+
+$billing = $shipping->replicate()->fill([
+	'type' => 'billing'
+]);
+
+$billing->save();
+```
+
+To exclude one or more attributes from being replicated to the new model, you may pass an array to the `replicate` method:
+```PHP
+$flight = Flight::create([
+	'destination' => 'LAX',
+	'origin' => 'LHR',
+	'last_flown' => '2020-03-04 11:00:00',
+	'last_pilot_id' => 747,
+]);
+
+$flight = $flight->replicate([
+	'last_flown',
+	'last_pilot_id'
+]);
+```
 # Query Scopes
 ### Global Scopes
+Global scopes allow you to add constraints to all queries for a given model. Writing your own global scopes can provide a convenient, easy way to make sure every query for a given model receives certain constraints.
+#### Generating Scopes
+To generate a new global scope, you may invoke the `make:scope` Artisan command, which will place the generated scope in your application's `app/Models/Scopes` directory:
+```PHP
+php artisan make:scope AncientScope
+```
+#### Writing Global Scopes
+Writing a global scope is simple. First, use the `make:scope` command to generate a class that implements the `Illuminate\Database\Eloquent\Scope` interface. The `Scope` interface requires you to implement one method: `apply`. The `apply` method may add `where` constraints or other types of clauses to the query as needed:
+```PHP
+<?php
+namespace App\Models\Scopes;
+
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Scope;
+
+class AncientScope implements Scope
+{
+/**
+ * Apply the scope to a given Eloquent query builder.
+ */
+	public function apply(Builder $builder, Model $model): void
+	{
+		$builder->where('created_at', '<', now()->subYears(2000));
+	}
+}
+```
+#### Applying Global Scopes
+To assign a global scope to a model, you should override the model's `booted` method and invoke the model's `addGlobalScope` method. The `addGlobalScope` method accepts an instance of your scope as its only argument.
+```PHP
+<?php
+
+namespace App\Models;
+
+use App\Models\Scopes\AncientScope;
+use Illuminate\Database\Eloquent\Model;
+
+class User extends Model
+{
+	/**
+	 * The "booted" method of the model.
+	 */
+	protected static function booted(): void
+	{
+		static::addGlobalScope(new AncientScope);
+	}
+}
+```
+#### Anonymous Global Scope
+When defining a global scope using a closure, you should provide a scope name of your own choosing as the first argument to the `addGlobalScope` method:
+```PHP
+<?php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
+
+class User extends Model
+{
+	/**
+	 * The "booted" method of the model.
+	 */
+
+	protected static function booted(): void
+	{
+		static::addGlobalScope('ancient', function (Builder $builder) {
+			$builder->where('created_at', '<', now()->subYears(2000));
+		});
+	}
+}
+```
+#### Removing Global Scopes
+If you would like to remove a global scope for a given query, you may use the `withoutGlobalScope` method. This method accepts the class name of the global scope as its only argument
+
+Or, if you defined the global scope using a closure, you should pass the string name that you assigned to the global scope
+
+If you would like to remove several or even all of the query's global scopes, you may use the `withoutGlobalScopes` method:
+```PHP
+// Remove all of the global scopes...
+User::withoutGlobalScopes()->get();
+
+// Remove some of the global scopes...
+User::withoutGlobalScopes([
+	FirstScope::class, SecondScope::class
+])->get();
+```
 ### Local Scopes
+Local scopes allow you to define common sets of query constraints that you may easily re-use throughout your application. To define a scope, prefix an Eloquent model method with `scope`
+Scopes should always return the same query builder instance or `void`:
+
+```PHP
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
+
+class User extends Model
+{
+	/**
+	 * Scope a query to only include popular users.
+	 */
+
+	public function scopePopular(Builder $query): void
+	{
+		$query->where('votes', '>', 100);
+	}
+	
+	/**
+ 	 * Scope a query to only include active users.
+	 */
+	
+	public function scopeActive(Builder $query): void
+	{
+		$query->where('active', 1);
+	}
+}
+```
+
+#### Utilizing A Local Scope
+Once the scope has been defined, you may call the scope methods when querying the model. However, you should not include the `scope` prefix when calling the method. You can even chain calls to various scopes:
+```PHP
+use App\Models\User;
+
+$users = User::popular()->active()->orderBy('created_at')->get();
+```
+#### Dynamic Scope
+Sometimes you may wish to define a scope that accepts parameters. To get started, just add your additional parameters to your scope method's signature. Scope parameters should be defined after the `$query` parameter:
+```PHP
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
+
+class User extends Model
+{
+	/**
+	 * Scope a query to only include users of a given type.
+	 */
+	public function scopeOfType(Builder $query, string $type): void
+	{
+		$query->where('type', $type);
+	}
+}
+```
+
+```PHP
+$users = User::ofType('admin')->get();
+```
 # Comparing Models
 Sometimes you may need to determine if two models are the "same" or not. The `is` and `isNot` methods may be used to quickly verify two models have the same primary key, table, and database connection or not:
 ```PHP
