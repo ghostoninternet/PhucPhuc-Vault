@@ -156,4 +156,173 @@ The `update` method expects an array of column and value pairs representing th
 >`wasChanged` method: determines if any attributes were changed when the model was last saved within the current request cycle. If needed, you may pass an attribute name to see if a particular attribute was changed.
 
 `getOriginal` method: returns an array containing the original attributes of the model regardless of any changes to the model since it was retrieved.  If needed, you may pass a specific attribute name to get the original value of a particular attribute.
+### Mass Assignment
+A mass assignment vulnerability occurs when a user passes an unexpected HTTP request field and that field changes a column in your database that you did not expect. For example, a malicious user might send an `is_admin` parameter through an HTTP request, which is then passed to your model's `create` method, allowing the user to escalate themselves to an administrator.
+#### Mass Assignment & JSON Columns
+When assigning JSON columns, each column's mass assignable key must be specified in your model's `$fillable` array
+#### Allowing Mass Assignment
+If you would like to make all of your attributes mass assignable, you may define your model's `$guarded` property as an empty array
+#### Mass Assignment Exceptions
+If you wish, you may instruct Laravel to throw an exception when attempting to fill an unfillable attribute by invoking the `preventSilentlyDiscardingAttributes` method. Typically, this method should be invoked within the `boot` method of one of your application's service providers.
+### Upsert
+Occasionally, you may need to update an existing model or create a new model if no matching model exists. Like the `firstOrCreate` method, the `updateOrCreate` method persists the model, so there's no need to manually call the `save` method.
+
+```PHP
+$flight = Flight::updateOrCreate(
+
+['departure' => 'Oakland', 'destination' => 'San Diego'],
+
+['price' => 99, 'discounted' => 1]
+
+);
+```
+
+If you would like to perform multiple "upserts" in a single query, then you should use the `upsert` method instead. The method's first argument consists of the values to insert or update, while the second argument lists the column(s) that uniquely identify records within the associated table. The method's third and final argument is an array of the columns that should be updated if a matching record already exists in the database. The `upsert` method will automatically set the `created_at` and `updated_at` timestamps if timestamps are enabled on the model.
+
+```PHP
+Flight::upsert([
+
+['departure' => 'Oakland', 'destination' => 'San Diego', 'price' => 99],
+
+['departure' => 'Chicago', 'destination' => 'New York', 'price' => 150]
+
+], ['departure', 'destination'], ['price']);
+```
+
+>All databases except SQL Server require the columns in the second argument of the `upsert` method to have a "primary" or "unique" index. In addition, the MySQL database driver ignores the second argument of the `upsert` method and always uses the "primary" and "unique" indexes of the table to detect existing records.
+# Deleting Models
+To delete a model, you may call the `delete` method on the model instance.
+
+You may call the `truncate` method to delete all of the model's associated database records. The `truncate` operation will also reset any auto-incrementing IDs on the model's associated table
+#### Deleting An Existing Model By Its Primary Key
+if you know the primary key of the model, you may delete the model without explicitly retrieving it by calling the `destroy` method. In addition to accepting the single primary key, the `destroy` method will accept multiple primary keys, an array of primary keys, or a [collection](https://laravel.com/docs/10.x/collections) of primary keys
+
+>The `destroy` method loads each model individually and calls the `delete` method so that the `deleting` and `deleted` events are properly dispatched for each model
+
+#### Deleting Models Using Queries
+In this example, we will delete all flights that are marked as inactive. Like mass updates, mass deletes will not dispatch model events for the models that are deleted:
+```PHP
+$deleted = Flight::where('active', 0)->delete();
+```
+>When executing a mass delete statement via Eloquent, the `deleting` and `deleted` model events will not be dispatched for the deleted models. This is because the models are never actually retrieved when executing the delete statement.
+### Soft Deleting
+When models are soft deleted, they are not actually removed from your database. Instead, a `deleted_at` attribute is set on the model indicating the date and time at which the model was "deleted". To enable soft deletes for a model, add the `Illuminate\Database\Eloquent\SoftDeletes` trait to the model
+```PHP
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class Flight extends Model
+
+{
+
+use SoftDeletes;
+
+}
+```
+
+You should also add the `deleted_at` column to your database table. The Laravel [schema builder](https://laravel.com/docs/10.x/migrations) contains a helper method to create this column:
+```PHP
+use Illuminate\Database\Schema\Blueprint;
+
+use Illuminate\Support\Facades\Schema;
+
+Schema::table('flights', function (Blueprint $table) {
+
+	$table->softDeletes();
+
+});
+
+Schema::table('flights', function (Blueprint $table) {
+
+	$table->dropSoftDeletes();
+
+});
+```
+
+To determine if a given model instance has been soft deleted, you may use the `trashed` method:
+```PHP
+if ($flight->trashed()) {
+	// ...
+
+}
+```
+
+#### Restore Soft Deleted Models
+To restore a soft deleted model, you may call the `restore` method on a model instance.
+
+You may also use the `restore` method in a query to restore multiple models. Again, like other "mass" operations, this will not dispatch any model events for the models that are restored:
+```PHP
+Flight::withTrashed()
+		->where('airline_id', 1)
+		->restore();
+```
+
+#### Permanently Deleting Models
+ou may use the `forceDelete` method to permanently remove a soft deleted model from the database table:
+```PHP
+$flight->forceDelete();
+```
+### Querying Soft Deleted Models
+You may force soft deleted models to be included in a query's results by calling the `withTrashed` method on the query
+```PHP
+use App\Models\Flight;
+
+$flights = Flight::withTrashed()
+					->where('account_id', 1)
+					->get();
+```
+The `onlyTrashed` method will retrieve **only** soft deleted models:
+```PHP
+$flights = Flight::onlyTrashed()
+					->where('airline_id', 1)
+					->get();
+```
+# Pruning Models
+Sometimes you may want to periodically delete models that are no longer needed. To accomplish this, you may add the `Illuminate\Database\Eloquent\Prunable` or `Illuminate\Database\Eloquent\MassPrunable` trait to the models you would like to periodically prune. After adding one of the traits to the model, implement a `prunable` method which returns an Eloquent query builder that resolves the models that are no longer needed.
+
+`pruning` method: This method will be called before the model is deleted. This method can be useful for deleting any additional resources associated with the model, such as stored files, before the model is permanently removed from the database
+
+After configuring your prunable model, you should schedule the `model:prune` Artisan command in your application's `App\Console\Kernel` class. You are free to choose the appropriate interval at which this command should be run:
+```PHP
+/**
+ * Define the application's command schedule.
+ */
+protected function schedule(Schedule $schedule): void
+{
+	$schedule->command('model:prune')->daily();
+}
+```
+
+
+
+# Replicating Models
+# Query Scopes
+### Global Scopes
+### Local Scopes
+# Comparing Models
+Sometimes you may need to determine if two models are the "same" or not. The `is` and `isNot` methods may be used to quickly verify two models have the same primary key, table, and database connection or not:
+```PHP
+if ($post->is($anotherPost)) {
+	// ...
+}
+
+if ($post->isNot($anotherPost)) {
+	// ...
+}
+```
+The `is` and `isNot` methods are also available when using the `belongsTo`, `hasOne`, `morphTo`, and `morphOne` [relationships](https://laravel.com/docs/10.x/eloquent-relationships). This method is particularly helpful when you would like to compare a related model without issuing a query to retrieve that model:
+```PHP
+if ($post->author()->is($user)) {
+	// ...
+}
+```
+# Events
+### Using Closures
+### Observers
+### Mutating Events
 
