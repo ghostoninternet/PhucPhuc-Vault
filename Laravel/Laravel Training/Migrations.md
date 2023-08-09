@@ -334,6 +334,80 @@ To rename an index, you may use the `renameIndex` method provided by the schem
 ```PHP
 $table->renameIndex('from', 'to')
 ```
+## Dropping Indexes
+To drop an index, you must specify the index's name. By default, Laravel automatically assigns an index name based on the table name, the name of the indexed column, and the index type. Here are some examples:
+![[Pasted image 20230809151054.png]]
+```PHP
+Schema::table('geo', function (Blueprint $table) {
 
+$table->dropIndex(['state']); // Drops index 'geo_state_index'
+
+});
+```
+## Foreign Key Constraints
+Laravel also provides support for creating foreign key constraints, which are used to force referential integrity at the database level. For example, let's define a `user_id` column on the `posts` table that references the `id` column on a `users` table:
+```PHP
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+Schema::table('posts', function (Blueprint $table) {
+	$table->unsignedBigInteger('user_id');
+	$table->foreign('user_id')->references('id')->on('users');
+});
+```
+
+When using the `foreignId` method to create your column, the example above can be rewritten like so:
+```PHP
+Schema::table('posts', function (Blueprint $table) {
+	$table->foreignId('user_id')->constrained();
+});
+```
+
+The `foreignId` method creates an `UNSIGNED BIGINT` equivalent column, while the `constrained` method will use conventions to determine the table and column being referenced. If your table name does not match Laravel's conventions, you may manually provide it to the `constrained` method. In addition, the name that should be assigned to the generated index may be specified as well:
+```PHP
+Schema::table('posts', function (Blueprint $table) {
+	$table->foreignId('user_id')->constrained(
+		table: 'users', indexName: 'posts_user_id'
+	);
+});
+```
+
+You may also specify the desired action for the "on delete" and "on update" properties of the constraint:
+```PHP
+$table->foreignId('user_id')
+	  ->constrained()
+	  ->onUpdate('cascade')
+	  ->onDelete('cascade');
+```
+![[Pasted image 20230809151735.png]]
+Any additional [column modifiers](https://laravel.com/docs/10.x/migrations#column-modifiers) must be called before the `constrained` method:
+
+```PHP
+$table->foreignId('user_id')
+	  ->nullable()
+	  ->constrained();
+```
+### Dropping Foreign Keys
+To drop a foreign key, you may use the `dropForeign` method, passing the name of the foreign key constraint to be deleted as an argument. Foreign key constraints use the same naming convention as indexes.
+```PHP
+$table->dropForeign('posts_user_id_foreign');
+```
+
+Alternatively, you may pass an array containing the column name that holds the foreign key to the `dropForeign` method. The array will be converted to a foreign key constraint name using Laravel's constraint naming conventions:
+```PHP
+$table->dropForeign(['user_id']);
+```
+### Toggling Foreign Key Constraints
+You may enable or disable foreign key constraints within your migrations by using the following methods:
+```PHP
+Schema::enableForeignKeyConstraints();
+
+Schema::disableForeignKeyConstraints();
+
+Schema::withoutForeignKeyConstraints(function () {
+
+	// Constraints disabled within this closure...
+});
+```
 
 

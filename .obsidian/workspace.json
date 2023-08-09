@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Laravel/Laravel Training/Migrations.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -173,6 +173,8 @@
   },
   "active": "1c2b12aa756a36dc",
   "lastOpenFiles": [
+    "Pasted image 20230809151735.png",
+    "Pasted image 20230809151054.png",
     "Pasted image 20230809150756.png",
     "Pasted image 20230809150741.png",
     "Pasted image 20230809150308.png",
@@ -212,8 +214,6 @@
     "Image Bank/B-tree.png",
     "Image Bank/indexed-files.png",
     "Image Bank/Hashed-file-example-2.png",
-    "Image Bank/Hashed-file-example-1.png",
-    "Image Bank/Heap-file-example.png",
     "Cơ Sở Dữ Liệu",
     "Laravel",
     "React Basic - Meta Front-end Coursera",
