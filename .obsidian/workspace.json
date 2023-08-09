@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Laravel/Laravel Training/Database - Query Builder.md",
+                "file": "Laravel/Laravel Training/Pagination.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Laravel/Laravel Training/Database - Query Builder.md",
+                "file": "Laravel/Laravel Training/Pagination.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Laravel/Laravel Training/Database - Query Builder.md",
+                "file": "Laravel/Laravel Training/Pagination.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Laravel/Laravel Training/Database - Query Builder.md"
+                "file": "Laravel/Laravel Training/Pagination.md"
               }
             }
           }
@@ -173,8 +173,9 @@
   },
   "active": "1c2b12aa756a36dc",
   "lastOpenFiles": [
-    "Laravel/Laravel Training/Eloquent - Getting Started.md",
     "Laravel/Laravel Training/Database - Query Builder.md",
+    "Laravel/Laravel Training/Pagination.md",
+    "Laravel/Laravel Training/Eloquent - Getting Started.md",
     "Laravel/Laravel Training/Digging Deeper/Collection.md",
     "Laravel/Laravel Training/Digging Deeper",
     "Laravel/Laravel Training/Controllers.md",
@@ -205,7 +206,6 @@
     "JavaScript/F8/HTML DOM/DOM Attribute.md",
     "JavaScript/F8/HTML DOM/DOM Events.md",
     "JavaScript/F8/HTML DOM/Get Elements Methods.md",
-    "JavaScript/F8/HTML DOM/DOM Text.md",
     "Image Bank/B-tree.png",
     "Image Bank/indexed-files.png",
     "Image Bank/Hashed-file-example-2.png",
