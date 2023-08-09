@@ -147,3 +147,40 @@ Schema::table('users', function (Blueprint $table) {
 ## Available Column Types
 [Click here to see all column types](https://laravel.com/docs/10.x/migrations#available-column-types)
 ## Column Modifiers
+In addition to the column types listed above, there are several column "modifiers" you may use when adding a column to a database table.
+```PHP
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+Schema::table('users', function (Blueprint $table) {
+	$table->string('email')->nullable();
+});
+```
+
+![[Pasted image 20230809112131.png]]
+### Default Expression
+The `default` modifier accepts a value or an `Illuminate\Database\Query\Expression` instance. Using an `Expression` instance will prevent Laravel from wrapping the value in quotes and allow you to use database specific functions.
+### Column Order
+When using the MySQL database, the `after` method may be used to add columns after an existing column in the schema:
+```PHP
+$table->after('password', function (Blueprint $table) {
+	$table->string('address_line1');
+	$table->string('address_line2');
+	$table->string('city');
+});
+```
+## Renaming Columns
+To rename a column, you may use the `renameColumn` method provided by the schema builder:
+```PHP
+Schema::table('users', function (Blueprint $table) {
+	$table->renameColumn('from', 'to');
+});
+```
+## Dropping Columns
+To drop a column, you may use the `dropColumn` method on the schema builder:
+```PHP
+Schema::table('users', function (Blueprint $table) {
+	$table->dropColumn('votes');
+});
+```
+
