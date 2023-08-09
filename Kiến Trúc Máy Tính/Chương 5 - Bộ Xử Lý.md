@@ -191,4 +191,25 @@ Thay đổi trình tự mã để tránh sử dụng kết quả load ở lệnh
 ![[Pasted image 20230809224607.png]]
 ### Hazard điều khiển
 Rẽ nhánh xác định luồng điều khiển
-	- 
+	- Nhận lệnh tiếp theo phụ thuộc vào kết quả rẽ nhánh
+	- Đường ống không thể luôn nhận đúng lệnh
+Với đường ống của MIPS
+	- Cần so sánh thanh ghi và tính địa chỉ đích sớm trong đường ống
+	- Thêm phần cứng để thực hiện việc đó trong công đoạn ID
+### Trì hoãn khi rẽ nhánh
+Đợi cho đến khi kết quả rẽ nhánh đã được xác định trước khi nhận lệnh tiếp theo
+![[Pasted image 20230809225119.png]]
+### Dự đoán rẽ nhánh
+Những đường ống dài hơn không thể sớm xác định dễ dàng kết quả rẽ nhánh
+--> Cách trì hoãn không đáp ứng được
+Dự đoán kết quả rẽ nhanh --> Chỉ trì hoãn khi kết quả dự đoán sai
+Với MIPS:
+	- Có thể dự đoán rẽ nhánh không xẩy ra
+	- Nhận lệnh ngay sau lệnh rẽ nhánh (không làm trễ)
+![[Pasted image 20230809225333.png]]
+### Đặc điểm của đường ống
+- Kỹ thuật đường ống cải thiện hiệu năng bằng cách tăng số lệnh thực hiện
+	- Thực hiện nhiều lệnh đồng thời
+	- Mỗi lệnh có cùng thời gian thực hiện
+- Các dạng hazard: Cấu trúc, dữ liệu, điều khiển
+- Thiết kế tập lệnh ảnh hưởng đến độ phức tạp của việc thực hiện đường ống

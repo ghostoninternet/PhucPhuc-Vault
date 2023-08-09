@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kiến Trúc Máy Tính/Chương 5 - Bộ Xử Lý.md",
+                "file": "Kiến Trúc Máy Tính/Chương 6 - Bộ Nhớ Máy Tính.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kiến Trúc Máy Tính/Chương 5 - Bộ Xử Lý.md",
+                "file": "Kiến Trúc Máy Tính/Chương 6 - Bộ Nhớ Máy Tính.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kiến Trúc Máy Tính/Chương 5 - Bộ Xử Lý.md",
+                "file": "Kiến Trúc Máy Tính/Chương 6 - Bộ Nhớ Máy Tính.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kiến Trúc Máy Tính/Chương 5 - Bộ Xử Lý.md"
+                "file": "Kiến Trúc Máy Tính/Chương 6 - Bộ Nhớ Máy Tính.md"
               }
             }
           }
@@ -149,6 +149,11 @@
   },
   "active": "ae746377ddc2db83",
   "lastOpenFiles": [
+    "Pasted image 20230809234407.png",
+    "Pasted image 20230809233230.png",
+    "Kiến Trúc Máy Tính/Chương 5 - Bộ Xử Lý.md",
+    "Pasted image 20230809225333.png",
+    "Pasted image 20230809225119.png",
     "Pasted image 20230809224607.png",
     "Pasted image 20230809224425.png",
     "Pasted image 20230809224147.png",
@@ -156,13 +161,8 @@
     "Pasted image 20230809223148.png",
     "Pasted image 20230809222631.png",
     "Pasted image 20230809222545.png",
-    "Pasted image 20230809222536.png",
-    "Pasted image 20230809222520.png",
-    "Pasted image 20230809222509.png",
-    "Pasted image 20230809222451.png",
-    "Kiến Trúc Máy Tính/Chương 5 - Bộ Xử Lý.md",
     "Kiến Trúc Máy Tính",
-    "Untitled.md",
+    "Kiến Trúc Máy Tính/Chương 6 - Bộ Nhớ Máy Tính.md",
     "Laravel/Laravel Training/Migrations.md",
     "Laravel/Laravel Training/Pagination.md",
     "Laravel/Laravel Training/Database - Query Builder.md",
