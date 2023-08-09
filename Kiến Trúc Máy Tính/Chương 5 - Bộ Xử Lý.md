@@ -120,6 +120,75 @@ Datapath: gồm các thành phần để xử lý dữ liệu và địa chỉ
 ![[Pasted image 20230809214343.png]]
 ### Các thành phần thực hiện các lệnh lw/sw
 ![[Pasted image 20230809214917.png]]
+![[Pasted image 20230809220040.png]]
+![[Pasted image 20230809220052.png]]
+### Các thành phần thực hiện lệnh Branch
+![[Pasted image 20230809215448.png]]
+![[Pasted image 20230809220000.png]]
+### Hợp các thành phần cho các lệnh
+- Datapath cho các lệnh thực hiện trong 1 chu kỳ
+	- Mỗi phần tử của datapath chỉ có thể làm một chức năng trong mỗi chu kỳ
+	- Do đó, cần tách rời bộ nhớ lệnh và bộ nhớ dữ liệu
+- Sử dụng các bộ chọn kênh để chọn dữ liệu nguồn cho các lệnh khác nhau
+![[Pasted image 20230809215636.png]]
+![[Pasted image 20230809215648.png]]
 
+## 2. Thiết Kế Control Unit
+Đơn vị điều khiển có hai phần:
+- Bộ điều khiển ALU
+- Bộ điều khiển chính
+ALU được sử dụng để:
+- Load/Store: F = add (xác định địa chỉ bộ nhớ dữ liệu)
+- Branch: F = subtract (so sánh)
+- Các lệnh số học/logic: F phụ thuộc vào funct code
+Bộ điều khiển ALU sử dụng mạch logic tổ hợp:
+- Đầu vào: **2-bit ALUOp được tạo ra từ opcode của lệnh** và **6-bit của function code**
+- Đầu ra: các tín hiệu điều khiển ALU (ALU Control) gồm 4 bit
+![[Pasted image 20230809222316.png]]
+![[Pasted image 20230809222410.png]]
+![[Pasted image 20230809222451.png]]
+![[Pasted image 20230809222509.png]]
+![[Pasted image 20230809222520.png]]
+![[Pasted image 20230809222536.png]]
+![[Pasted image 20230809222545.png]]
+![[Pasted image 20230809222631.png]]
 # 5.3 Kỹ Thuật Đường Ống Lệnh và Song Song Mức Lệnh
-
+- Kỹ thuật đường ống lệnh (Instruction Pipelining): Chia chu trình lệnh thành các công đoạn và cho phép thực hiện gối lệnh lên nhau (như dây chuyền lắp rắp)
+- Bộ xử lý MIPS có 5 công đoạn:
+	1. **IF**: Nhận lệnh từ bộ nhớ
+	2. **ID**: Giải mã lệnh và đọc thanh ghi
+	3. **EX**: Thực hiện thao tác hoặc tính toán địa chỉ
+	4. **MEM**: Truy nhập toán hạng bộ nhớ
+	5. **WB**: Ghi kết quả trả về thanh ghi
+![[Pasted image 20230809223148.png]]
+### Các mối trở ngại (HAZARD) của đường ống lệnh
+- Hazard: Tình huống ngăn cản bắt đầu của lệnh tiếp theo ở chu kỳ tiếp theo
+	- **Hazard cấu trúc**: do tài nguyên được yêu cầu đang bận
+	- **Hazard dữ liệu**: cần phải đợi lệnh trước hoàn thành việc đọc / ghi dữ liệu
+	- **Hazard điều khiển**: do rẽ nhánh gây ra
+### Hazard cấu trúc
+Xung đột khi sử dụng tài nguyên
+Trong đường ống của MIPS với một bộ nhớ dùng chung
+	- Lệnh Load / Store yêu cầu truy cập dữ liệu
+	- Nhận lệnh cần trì hoãn cho chu kỳ đó
+Bởi vậy, datapath kiểu đường ống yêu cầu bộ nhớ lệnh và bộ nhớ dữ liệu tách rời (hoặc cache lệnh / cache dữ liệu tách rời)
+### Hazard dữ liệu
+Lệnh phụ thuộc vào việc hoàn thành truy cập dữ liệu của lệnh trước đó
+![[Pasted image 20230809223937.png]]
+### Fowarding (Gửi vượt trước)
+Sử dụng kết quả ngay sau khi nó được tính
+	- Không đợi đến khi kết quả được lưu đến thanh ghi
+	- Yêu cầu có đường kết nối thêm trong datapath
+![[Pasted image 20230809224147.png]]
+### Hazard dữ liệu với lệnh load
+Không phải luôn luôn có thể tránh trì hoãn bằng cách forwarding
+	- Nếu giá trị chưa được tính khi cần thiết
+	- Không thể chuyển ngược thời gian
+	- Cần chèn bước trì hoãn (stall hay bubble)
+![[Pasted image 20230809224425.png]]
+### Lập lịch mã để tránh trì hoãn
+Thay đổi trình tự mã để tránh sử dụng kết quả load ở lệnh tiếp theo
+![[Pasted image 20230809224607.png]]
+### Hazard điều khiển
+Rẽ nhánh xác định luồng điều khiển
+	- 
