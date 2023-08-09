@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Kiến Trúc Máy Tính/Chương 6 - Bộ Nhớ Máy Tính.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 355.5
   },
   "right": {
     "id": "e1628290df2af6d7",
@@ -150,20 +149,19 @@
   },
   "active": "ae746377ddc2db83",
   "lastOpenFiles": [
-    "Pasted image 20230810003709.png",
-    "Pasted image 20230810003322.png",
-    "Pasted image 20230810001856.png",
-    "Pasted image 20230810001854.png",
-    "Pasted image 20230810000920.png",
-    "Pasted image 20230810000812.png",
-    "Pasted image 20230809235012.png",
-    "Pasted image 20230809234407.png",
-    "Pasted image 20230809233230.png",
     "Kiến Trúc Máy Tính/Chương 5 - Bộ Xử Lý.md",
-    "Pasted image 20230809225333.png",
-    "Pasted image 20230809225119.png",
-    "Kiến Trúc Máy Tính",
     "Kiến Trúc Máy Tính/Chương 6 - Bộ Nhớ Máy Tính.md",
+    "Image Bank/Pasted image 20230809202442.png",
+    "Image Bank/Pasted image 20230809202154.png",
+    "Image Bank/Pasted image 20230809202144.png",
+    "Image Bank/Pasted image 20230809201318.png",
+    "Image Bank/Pasted image 20230809200906.png",
+    "Image Bank/Pasted image 20230809224607.png",
+    "Image Bank/Pasted image 20230809224425.png",
+    "Image Bank/Pasted image 20230809224147.png",
+    "Image Bank/Pasted image 20230809223937.png",
+    "Image Bank/Pasted image 20230809223148.png",
+    "Kiến Trúc Máy Tính",
     "Laravel/Laravel Training/Migrations.md",
     "Laravel/Laravel Training/Pagination.md",
     "Laravel/Laravel Training/Database - Query Builder.md",

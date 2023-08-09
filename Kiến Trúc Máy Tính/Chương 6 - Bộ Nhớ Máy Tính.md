@@ -106,10 +106,29 @@ Trong một khoảng thời gian đủ nhỏ CPU thường chỉ tham chiếu c�
 - Trường Set có S bit dùng để xác định một trong số các Set trong cache. 2^S = Số Set trong cache
 - Trường Tag có T bit: T = N - (W + S)
 - Khi CPU muốn truy nhập một từ nhớ thì nó phát ra một địa chỉ N bit cụ thể:
-	- Nhờ vào giá trị S bit của trường Set se tìm ra Set tương ứng
+	- Nhờ vào giá trị S bit của trường Set sẽ tìm ra Set tương ứng
 	- So sánh T bit bên trái của địa chỉ vừa phát ra với lần lượt nội dung của các Tag trong Set đó
 		- Nếu gặp giá trị bằng nhau: cache hit xảy ra ở Line tương ứng
 		- Nếu không có giá trị nào bằng nhau: cache miss
 - Tổng quát cho cả 2 phương pháp trên
 - Thông dụng với: 2, 4, 8, 16 Lines / Set
+## 3. Thay thế Block trong cache
+- Với ánh xạ trực tiếp:
+	- Không phải lựa chọn
+	- Mỗi Block chỉ ánh xạ vào một Line xác định
+	- Thay thế Block ở Line đó
+- Với ánh xạ liên kết: cần có giải thuật thay thế:
+	- Random
+	- FIFO
+	- LFU (Least Frequently Used)
+	- LRU (Least Recently Used)
+	- Tối ưu nhất: LRU
+## 4. Phương pháp ghi dữ liệu khi cache hit
+- Ghi xuyên qua (Write-through):
+	- Ghi cả cache và cả bộ nhớ chính
+	- Tốc độ chậm
+- Ghi trả sau (Write-back)
+	- Chỉ ghi ra cache
+	- Tốc độ nhanh
+	- Khi Block trong cache bị thay thế, cần phải ghi trả cả Block về bộ nhớ chính
 # 6.4 Bộ Nhớ Ngoài
