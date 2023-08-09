@@ -91,6 +91,7 @@ To run all of your outstanding migrations, execute the `migrate` Artisan comma
 php artisan migrate
 ```
 If you would like to see which migrations have run thus far, you may use the `migrate:status` Artisan command
+
 If you would like to see the SQL statements that will be executed by the migrations without actually running them, you may provide the `--pretend` flag to the `migrate` command
 ### Isolating Migration Execution
 If you are deploying your application across multiple servers and running migrations as part of your deployment process, you likely do not want two servers attempting to migrate the database at the same time. To avoid this, you may use the `isolated` option when invoking the `migrate` command.
@@ -121,13 +122,23 @@ The `migrate:reset` command will roll back all of your application's migration
 ```PHP
 php artisan migrate:reset
 ```
+
+You may roll back a specific "batch" of migrations by providing the `batch` option to the `rollback` command, where the `batch` option corresponds to a batch value within your application's `migrations` database table.
+```PHP
+php artisan migrate:rollback --batch=3
+```
+
+If you would like to see the SQL statements that will be executed by the migrations without actually running them, you may provide the `--pretend` flag to the `migrate:rollback` command
+```PHP
+php artisan migrate:rollback --pretend
+```
 ### Rollback & Migrate Using A Single Command
 The `migrate:refresh` command will roll back all of your migrations and then execute the `migrate` command. This command effectively re-creates your entire database
+
 You may roll back and re-migrate a limited number of migrations by providing the `step` option to the `refresh` command
 ### Drop All Tables & Migrate
 The `migrate:fresh` command will drop all tables from the database and then execute the `migrate` command
 >The `migrate:fresh` command will drop all database tables regardless of their prefix. This command should be used with caution when developing on a database that is shared with other applications.
-
 # Tables
 ## Creating Tables
 To create a new database table, use the `create` method on the `Schema` facade. The `create` method accepts two arguments: the first is the name of the table, while the second is a closure which receives a `Blueprint` object that may be used to define the new table:
@@ -148,6 +159,47 @@ if (Schema::hasTable('users')) {
 if (Schema::hasColumn('users', 'email')) {
 	// The "users" table exists and has an "email" column...
 }
+```
+
+### Database Connection & Table Options
+If you want to perform a schema operation on a database connection that is not your application's default connection, use the `connection` method
+```PHP
+Schema::connection('sqlite')->create('users', function (Blueprint $table) {
+	$table->id();
+});
+```
+
+The `engine` property may be used to specify the table's storage engine when using **MySQL**
+```PHP
+Schema::create('users', function (Blueprint $table) {
+	$table->engine = 'InnoDB';
+	// ...
+});
+```
+
+The `charset` and `collation` properties may be used to specify the character set and collation for the created table when using **MySQL**
+```PHP
+Schema::create('users', function (Blueprint $table) {
+	$table->charset = 'utf8mb4';
+	$table->collation = 'utf8mb4_unicode_ci';
+	// ...
+});
+```
+
+The `temporary` method may be used to indicate that the table should be "temporary". Temporary tables are only visible to the current connection's database session and are dropped automatically when the connection is closed:
+```PHP
+Schema::create('calculations', function (Blueprint $table) {
+	$table->temporary();
+	// ...
+});
+```
+
+If you would like to add a "comment" to a database table, you may invoke the `comment` method on the table instance. Table comments are currently only supported by **MySQL and Postgres**:
+```PHP
+Schema::create('calculations', function (Blueprint $table) {
+	$table->comment('Business calculations');
+	// ...
+});
 ```
 ## Updating Tables
 The `table` method on the `Schema` facade may be used to update existing tables. Like the `create` method, the `table` method accepts two arguments: the name of the table and a closure that receives a `Blueprint` instance you may use to add columns or indexes to the table
@@ -185,6 +237,7 @@ Schema::table('users', function (Blueprint $table) {
 });
 ```
 ## Available Column Types
+The schema builder blueprint offers a variety of methods that correspond to the different types of columns you can add to your database tables. Each of the available methods are listed in the table below:
 [Click here to see all column types](https://laravel.com/docs/10.x/migrations#available-column-types)
 ## Column Modifiers
 In addition to the column types listed above, there are several column "modifiers" you may use when adding a column to a database table.
@@ -201,12 +254,26 @@ Schema::table('users', function (Blueprint $table) {
 ### Default Expression
 The `default` modifier accepts a value or an `Illuminate\Database\Query\Expression` instance. Using an `Expression` instance will prevent Laravel from wrapping the value in quotes and allow you to use database specific functions.
 ### Column Order
-When using the MySQL database, the `after` method may be used to add columns after an existing column in the schema:
+When using the **MySQL** database, the `after` method may be used to add columns after an existing column in the schema:
 ```PHP
 $table->after('password', function (Blueprint $table) {
 	$table->string('address_line1');
 	$table->string('address_line2');
 	$table->string('city');
+});
+```
+## Modifying Columns
+The `change` method allows you to modify the type and attributes of existing columns. For example, you may wish to increase the size of a `string` column. To see the `change` method in action, let's increase the size of the `name` column from 25 to 50. To accomplish this, we simply define the new state of the column and then call the `change` method:
+```PHP
+Schema::table('users', function (Blueprint $table) {
+	$table->string('name', 50)->change();
+});
+```
+
+When modifying a column, you must explicitly include all of the modifiers you want to keep on the column definition - any missing attribute will be dropped. For example, to retain the `unsigned`, `default`, and `comment` attributes, you must call each modifier explicitly when changing the column:
+```PHP
+Schema::table('users', function (Blueprint $table) {
+	$table->integer('votes')->unsigned()->default(1)->comment('my comment')->change();
 });
 ```
 ## Renaming Columns
@@ -223,4 +290,50 @@ Schema::table('users', function (Blueprint $table) {
 	$table->dropColumn('votes');
 });
 ```
+
+```PHP
+Schema::table('users', function (Blueprint $table) {
+	$table->dropColumn(['votes', 'avatar', 'location']);
+});
+```
+
+### Available Command Aliases
+Laravel provides several convenient methods related to dropping common types of columns. Each of these methods is described in the table below:
+![[Pasted image 20230809150308.png]]
+# Indexes
+## Creating Indexes
+The Laravel schema builder supports several types of indexes. The following example creates a new `email` column and specifies that its values should be unique. To create the index, we can chain the `unique` method onto the column definition:
+```PHP
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+Schema::table('users', function (Blueprint $table) {
+	$table->string('email')->unique();
+});
+```
+
+Alternatively, you may create the index after defining the column. To do so, you should call the `unique` method on the schema builder blueprint. This method accepts the name of the column that should receive a unique index:
+```PHP
+$table->unique('email');
+```
+
+```PHP
+$table->index(['account_id', 'created_at']);
+```
+
+When creating an index, Laravel will automatically generate an index name based on the table, column names, and the index type, but you may pass a second argument to the method to specify the index name yourself:
+```PHP
+$table->unique('email', 'unique_email');
+```
+
+### Available Index Types
+Laravel's schema builder blueprint class provides methods for creating each type of index supported by Laravel. Each index method accepts an optional second argument to specify the name of the index. If omitted, the name will be derived from the names of the table and column(s) used for the index, as well as the index type.
+![[Pasted image 20230809150756.png]]
+## Renaming Indexes
+To rename an index, you may use the `renameIndex` method provided by the schema builder blueprint. This method accepts the current index name as its first argument and the desired name as its second argument:
+```PHP
+$table->renameIndex('from', 'to')
+```
+
+
 
