@@ -1,10 +1,34 @@
 # Introduction
 Migrations are like version control for your database, allowing your team to define and share the application's database schema definition. If you have ever had to tell a teammate to manually add a column to their local database schema after pulling in your changes from source control, you've faced the problem that database migrations solve.
+
+The Laravel `Schema` [facade](https://laravel.com/docs/10.x/facades) provides database agnostic support for creating and manipulating tables across all of Laravel's supported database systems. Typically, migrations will use this facade to create and modify database tables and columns.
 # Generating Migrations
 You may use the `make:migration` [Artisan command](https://laravel.com/docs/10.x/artisan) to generate a database migration. The new migration will be placed in your `database/migrations` directory. Each migration filename contains a timestamp that allows Laravel to determine the order of the migrations:
 ```PHP
 php artisan make:migration create_flights_table
 ```
+Laravel will use the name of the migration to attempt to guess the name of the table and whether or not the migration will be creating a new table. If Laravel is able to determine the table name from the migration name, Laravel will pre-fill the generated migration file with the specified table. Otherwise, you may simply specify the table in the migration file manually.
+
+If you would like to specify a custom path for the generated migration, you may use the `--path` option when executing the `make:migration` command. The given path should be relative to your application's base path.
+## Squashing Migrations
+```PHP
+php artisan schema:dump
+
+# Dump the current database schema and prune all existing migrations...
+
+php artisan schema:dump --prune
+```
+When you execute this command, Laravel will write a "schema" file to your application's `database/schema` directory. The schema file's name will correspond to the database connection. Now, when you attempt to migrate your database and no other migrations have been executed, Laravel will first execute the SQL statements in the schema file of the database connection you are using. After executing the schema file's SQL statements, Laravel will execute any remaining migrations that were not part of the schema dump.
+
+If your application's tests use a different database connection than the one you typically use during local development, you should ensure you have dumped a schema file using that database connection so that your tests are able to build your database. You may wish to do this after dumping the database connection you typically use during local development:
+```PHP
+php artisan schema:dump
+
+php artisan schema:dump --database=testing --prune
+```
+You should commit your database schema file to source control so that other new developers on your team may quickly create your application's initial database structure.
+
+>Migration squashing is only available for the MySQL, PostgreSQL, and SQLite databases and utilizes the database's command-line client. Schema dumps may not be restored to in-memory SQLite databases.
 # Migration Structure
 A migration class contains two methods: `up` and `down`. The `up` method is used to add new tables, columns, or indexes to your database, while the `down` method should reverse the operations performed by the `up` method.
 ```PHP
@@ -68,15 +92,31 @@ php artisan migrate
 ```
 If you would like to see which migrations have run thus far, you may use the `migrate:status` Artisan command
 If you would like to see the SQL statements that will be executed by the migrations without actually running them, you may provide the `--pretend` flag to the `migrate` command
+### Isolating Migration Execution
+If you are deploying your application across multiple servers and running migrations as part of your deployment process, you likely do not want two servers attempting to migrate the database at the same time. To avoid this, you may use the `isolated` option when invoking the `migrate` command.
+
+When the `isolated` option is provided, Laravel will acquire an atomic lock using your application's cache driver before attempting to run your migrations. All other attempts to run the `migrate` command while that lock is held will not execute; however, the command will still exit with a successful exit status code:
+```PHP
+php artisan migrate --isolated
+```
+
+>To utilize this feature, your application must be using the `memcached`, `redis`, `dynamodb`, `database`, `file`, or `array` cache driver as your application's default cache driver. In addition, all servers must be communicating with the same central cache server.
+### Forcing Migrations To Run In Production
+Some migration operations are destructive, which means they may cause you to lose data. In order to protect you from running these commands against your production database, you will be prompted for confirmation before the commands are executed. To force the commands to run without a prompt, use the `--force` flag:
+```PHP
+php artisan migrate --force
+```
 ## Rolling back migrations
 To roll back the latest migration operation, you may use the `rollback` Artisan command. This command rolls back the last "batch" of migrations, which may include multiple migration files
 ```PHP
 php artisan migrate:rollback
 ```
+
 You may roll back a limited number of migrations by providing the `step` option to the `rollback` command
 ```PHP
 php artisan migrate:rollback --step=5
 ```
+
 The `migrate:reset` command will roll back all of your application's migrations
 ```PHP
 php artisan migrate:reset
