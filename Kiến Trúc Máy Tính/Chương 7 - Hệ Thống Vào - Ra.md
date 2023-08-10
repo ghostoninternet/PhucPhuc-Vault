@@ -31,11 +31,12 @@
 	- Không gian địa chỉ bộ nhớ
 	- Không gian địa chỉ vào-ra
 ### Các phương pháp địa chỉ hóa cổng vào-ra
-**Vào ra theo bản đồ bộ nhớ (Memory mapped IO)
+**Vào ra theo bản đồ bộ nhớ (Memory mapped IO)**
 - Cổng vào-ra được đánh địa chỉ theo không gian địa chỉ bộ nhớ
 - CPU coi cổng vào-ra như ngăn nhớ
 - Lập trình trao đổi dữ liệu với cổng vào-ra bằng các lệnh truy nhập dữ liệu bộ nhớ
 - Có thể thực hiện trên mọi hệ thống
+
 **Vào ra riêng biệt (Isolated IO)**
 - Cổng vào-ra được đánh địa chỉ theo không gian địa chỉ vào-ra riêng
 - Lập trình trao đổi dữ liệu với cổng vào-ra bằng các lệnh vào-ra chuyên dụng
@@ -71,6 +72,7 @@ Isolated IO: sử dụng các lệnh vào-ra chuyên dụng (IN, OUT)
 - Khi đã có dữ liệu --> Mô-đun vào-ra phát tín hiệu ngắt CPU
 - CPU yêu cầu dữ liệu
 - Mô-đun vào ra chuyển dữ liệu đến CPU
+
 **Nhìn từ CPU**:
 - Phát tín hiệu điều khiển đọc
 - Làm việc khác
