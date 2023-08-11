@@ -4,52 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f7c9d00197907b7f",
+        "id": "19525ddb572d9a47",
         "type": "tabs",
         "children": [
           {
-            "id": "0b3e05cf15682423",
+            "id": "1e44c19c2a6c1a48",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kiến Trúc Máy Tính/Chương 5 - Bộ Xử Lý.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ae746377ddc2db83",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Kiến Trúc Máy Tính/Chương 6 - Bộ Nhớ Máy Tính.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9cbf6bccb2282a08",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Kiến Trúc Máy Tính/Chương 7 - Hệ Thống Vào - Ra.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "dcf966ffe8e1d4de",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Chương 8 - Các Kiến Trúc Song Song.md",
+                "file": "HTML - CSS - JavaScript/F8/HTML - CSS/Media Query (@media).md",
                 "mode": "source",
                 "source": false
               }
@@ -105,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e1628290df2af6d7",
@@ -122,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kiến Trúc Máy Tính/Chương 5 - Bộ Xử Lý.md",
+                "file": "HTML - CSS - JavaScript/F8/HTML - CSS/Media Query (@media).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kiến Trúc Máy Tính/Chương 5 - Bộ Xử Lý.md",
+                "file": "HTML - CSS - JavaScript/F8/HTML - CSS/Media Query (@media).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kiến Trúc Máy Tính/Chương 5 - Bộ Xử Lý.md"
+                "file": "HTML - CSS - JavaScript/F8/HTML - CSS/Media Query (@media).md"
               }
             }
           }
@@ -184,22 +147,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0b3e05cf15682423",
+  "active": "1e44c19c2a6c1a48",
   "lastOpenFiles": [
+    "HTML - CSS - JavaScript/F8/HTML - CSS/Media Query (@media).md",
+    "HTML - CSS - JavaScript/F8/HTML - CSS",
+    "Image Bank/Pasted image 20230810083224.png",
+    "Image Bank/Pasted image 20230810081942.png",
+    "Image Bank/Pasted image 20230810081939.png",
+    "Image Bank/Pasted image 20230810080142.png",
+    "Image Bank/Pasted image 20230810073802.png",
+    "Image Bank/Pasted image 20230810145508.png",
+    "Image Bank/Pasted image 20230810145309.png",
+    "Image Bank/Pasted image 20230810144519.png",
+    "Image Bank/Pasted image 20230810144509.png",
+    "Image Bank/Pasted image 20230810143546.png",
+    "Kiến Trúc Máy Tính/Chương 8 - Các Kiến Trúc Song Song.md",
     "Kiến Trúc Máy Tính/Chương 7 - Hệ Thống Vào - Ra.md",
-    "Chương 8 - Các Kiến Trúc Song Song.md",
     "Kiến Trúc Máy Tính/Chương 6 - Bộ Nhớ Máy Tính.md",
     "Kiến Trúc Máy Tính/Chương 5 - Bộ Xử Lý.md",
-    "Pasted image 20230810145508.png",
-    "Pasted image 20230810145309.png",
-    "Pasted image 20230810144519.png",
-    "Pasted image 20230810144509.png",
-    "Pasted image 20230810143546.png",
-    "Pasted image 20230810143529.png",
-    "Pasted image 20230810143524.png",
-    "Pasted image 20230810143341.png",
-    "Pasted image 20230810143329.png",
-    "Pasted image 20230810142748.png",
     "Kiến Trúc Máy Tính",
     "Laravel/Laravel Training/Migrations.md",
     "Laravel/Laravel Training/Pagination.md",
@@ -230,7 +195,6 @@
     "Cơ Sở Dữ Liệu",
     "Laravel",
     "React Basic - Meta Front-end Coursera",
-    "JavaScript/HTML DOM Knowledge",
     "Untitled.canvas"
   ]
 }
