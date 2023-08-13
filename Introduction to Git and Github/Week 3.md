@@ -3,8 +3,23 @@
 >**GitHub**: a web-based Git repository hosting service. GitHub provides free access to a Git server for public and private repository.
 >**WARNING**: for real configuration and development work, you should use a secure and private Git server, and limit the people authorized to work on it.
 
-`git clone {{repository's url}}`
---> Create a local copy of the repository.
+```
+git clone <<repository's url>>
+```
+>Create a local copy of the repository.
+>
+>**Note:** If you are using a **private** repo, then you will need to use your Github username and personal access token to clone the repo via HTTPS method as password authentication method is currently not supported by Github.
+>
+>>**Generating a Personal Access Token:**
+>>**Personal Access Token** can be created by moving the application settings of your Github account. Proceed to the **Settings** menu and choose **Developer settings**, where you will locate the option for **Personal Access Token**. By utilizing this token, you will be enabled to clone and push to your remote repository using HTTPS.
+
+```
+git clone [URL] directory_name
+```
+>If you want to clone the repository into another directory of your choice, you can do that by passing the name of the directory. This automatically creates a new directory with the specified name and initializes the repository inside it.
+
+
+
 `git push` 
 --> Send our changes from the local copy to the remote repository
 `git config --global credential.helper cache`

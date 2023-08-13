@@ -28,57 +28,114 @@ File removals go through the same general workflow that we've seen, so you'll ne
 >Inside this file, we'll specify rules to tell git which files to skip for the current repo.
 
 # Undoing Things
-`git checkout {{file's name}}`
---> Change a file back to its earlier committed state
-`git checkout -p {{file's name}}`
---> Checkout individual changes instead of a whole file. This will ask you change by change if you want to go back to the previous snapshot or not.
-`git reset HEAD {{file's name}}`
---> Unstages the changes of a file.  Move all files out of the staging area.
-`git reset -p`
---> Get git to ask you which specific changes you want to reset.
-`git add *`
---> Add all changes in every files to the staging area.
-`git commit --amend`
---> Git takes whatever is currently in our staging area and run the git commit workflow to overwrite the previous commit (allow us to modify and add changes to the most recent commit)
-**DO NOT** use `git commit --amend` with public repository. Fixing up a local commit with amend is great but avoid amending commits that have already been made public
-`git revert HEAD`
---> Creates a commit that contains the inverse of all the changes made in the bad commit in order to cancel them out. By using the **HEAD** alias, we can revert the latest commit. 
-`git revert {{commit ID}}`
---> Revert to the commit that has the commit ID equal to the {{commit ID}}
+
+```
+git checkout <<file's name>>
+```
+>Change a file back to its earlier committed state
+
+```
+git checkout -p <<file's name>>
+`````
+>Checkout individual changes instead of a whole file. This will ask you change by change if you want to go back to the previous snapshot or not.
+
+```
+git reset HEAD {{file's name}}
+```
+>Unstages the changes of a file.  Move all files out of the staging area.
+
+```
+git reset -p
+```
+>Get git to ask you which specific changes you want to reset.
+
+```
+git add *
+```
+>Add all changes in every files to the staging area.
+
+```
+git commit --amend
+```
+>Git takes whatever is currently in our staging area and run the git commit workflow to overwrite the previous commit (allow us to modify and add changes to the most recent commit)
+>**DO NOT** use `git commit --amend` with public repository. Fixing up a local commit with amend is great but avoid amending commits that have already been made public
+
+```
+git revert HEAD
+```
+>Creates a commit that contains the inverse of all the changes made in the bad commit in order to cancel them out. By using the **HEAD** alias, we can revert the latest commit. 
+
+```
+git revert <<commit ID>>
+```
+>Revert to the commit that has the commit ID equal to the {{commit ID}}
 
 # Branching and Merging
+
 > **Branch**: A pointer to a particular commit. It represents an independent line of development in a project
 > The default branch that git creates for you when a new repository is initialized is called **master**.
 > We can use the `git branch` command to list, create, delete and manipulate branches
 
-`git branch`
---> List all the branches in your repository
-`git branch {{name of the new branch}}`
---> Create a new branch 
-`git checkout`
---> Check out the latest snapshot for both files and for branches
-`git checkout -b {{new branch's name}}`
---> Create a new branch and move to that branch
+```
+git branch
+```
+>List all the branches in your repository
 
+```
+git branch {{name of the new branch}}
+```
+>Create a new branch 
+
+```
+git checkout
+```
+>Check out the latest snapshot for both files and for branches
+
+```
+git checkout <<branch's name>>
+```
+>Move to the new branch
+
+```
+git checkout -b {{new branch's name}}
+```
+>Create a new branch and move to that branch
 >When we switch branches, git also change files in our working directory or working tree whatever snapshot **HEAD** is pointing at. 
 >When we checkout a new branch and commit on it, those changes will be added to the history of that branch.
 >Each branch is just a pointer to a specific commit in a series of snapshots.
 
-`git branch -d {{branch's name}}`
---> To delete a branch without any unmerged changes.
-`git branch -D {{branch's name}}`
---> To delete a branch even if it has unmerged changes.
+```
+git branch -d {{branch's name}}
+```
+>To delete a branch without any unmerged changes.
+
+```
+git branch -D {{branch's name}}
+```
+>To delete a branch even if it has unmerged changes.
 
 >**Merging**: The term that Git uses for combining branched data and history together.
 >When we merge two branches together, both branches are pointed at the same commit.
 >Git uses 2 different algorithms to perform a merge: **fast-forward** and **three-way merge**.
 >**Fast-forward** is used when the checked out branch are also in the branch that's being merged. **Three-way merge** is performed when the history of the merging branches has diverged in some way, and there isn't a nice linear path to combine them via **fast-forwarding**.
 
-`git merge`
---> Take the independent snapshots and history of one Git branch, and tangle them into another
-`git log --graph`
---> Seeing the commits as a graph
-`git log --graph --oneline`
---> See one line per commit
-`git merge --abort`
---> Stop the merge, and reset the files in the working tree back to the previous commit before the merge ever happened
+```
+git merge
+```
+>Take the independent snapshots and history of one Git branch, and tangle them into another
+
+```
+git log --graph
+```
+>Seeing the commits as a graph
+
+```
+git log --graph --oneline
+```
+>See one line per commit
+
+```
+git merge --abort
+```
+>Stop the merge, and reset the files in the working tree back to the previous commit before the merge ever happened
+

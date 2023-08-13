@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "6bfbaa435aecbce0",
+        "id": "c1e29d7d7e2dd2b3",
         "type": "tabs",
         "children": [
           {
-            "id": "9f2dc835f38e9bb7",
+            "id": "88168dddcbe66ed3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Introduction to Git and Github/Week 2.md",
-                "mode": "preview",
+                "file": "Introduction to Git and Github/Week 3.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Introduction to Git and Github/Week 2.md",
+                "file": "Introduction to Git and Github/Week 3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Introduction to Git and Github/Week 2.md",
+                "file": "Introduction to Git and Github/Week 3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Introduction to Git and Github/Week 2.md"
+                "file": "Introduction to Git and Github/Week 3.md"
               }
             }
           }
@@ -148,10 +148,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9f2dc835f38e9bb7",
+  "active": "88168dddcbe66ed3",
   "lastOpenFiles": [
-    "Introduction to Git and Github/Week 1.md",
     "Introduction to Git and Github/Week 3.md",
+    "Introduction to Git and Github/Week 2.md",
+    "Introduction to Git and Github/Week 1.md",
     "Introduction to Git and Github/Introduction to Git and Github - Goolge Coursera.md",
     "React Advanced - Meta Front-end Coursera/Week 3 - Advanced React.md",
     "Image Bank/Pasted image 20230812205257.png",
@@ -190,7 +191,6 @@
     "Laravel/Laravel Training/Routes.md",
     "Laravel/Laravel Notes of Code with Dary Course.md",
     "Laravel/Laravel Training",
-    "Introduction to Git and Github/Week 2.md",
     "Learning Docker/Docker - Hỏi Dân IT",
     "Learning Docker",
     "Cơ Sở Dữ Liệu",
