@@ -8,6 +8,18 @@
 > **PULL REQUEST**: A commit or series of commits that you send to the owner of the repository so that they incorporate into their tree.
 > **Typical Pull Request Workflow**: From the repo of an X user, create a fork for that repo. GitHub will automatically create a repository that has the same name, same files, same commits history as X user repo but this time is our repo. And then clone the forked repo to our local machine. 
 
+```
+git remote -v
+```
+>Verify that you have already setup a remote for the upstream repository, and an `origin`.
+
+>In terms of source control, you're "**downstream**" when you copy (clone, checkout, etc) from a repository. Information is flowed "downstream" to you.
+>When you make changes, you usually want to send them back "**upstream**" so they make it into that repository so that everyone pulling from the same source is working with all the same changes. This is mostly a social issue of how everyone can coordinate their work rather than a technical requirement of source control. You want to get your changes into the main project so you're not tracking divergent lines of development.
+>Setting the upstream for a fork you have created using the following command:
+```
+git remote add upstream https://github.com/[git-username]/[repo's name]
+```
+
 `git rebase -i master`
 --> An interactive version of the `rebase` command
 `git push -f`
