@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "39c30200d6d9f73d",
+        "id": "2b707530dd731f95",
         "type": "tabs",
         "children": [
           {
-            "id": "e0682c18d2fda4fd",
+            "id": "bd0c119178b6d652",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Introduction to Git and Github/Week 4.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -147,7 +143,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e0682c18d2fda4fd",
+  "active": "047a22bd5ed2877c",
   "lastOpenFiles": [
     "Introduction to Git and Github/Week 3.md",
     "Introduction to Git and Github/Week 2.md",
