@@ -531,11 +531,118 @@ $validator->after([
 ]);
 ```
 # Working With Validated Input
+First, you may call the `validated` method on a form request or validator instance. This method returns an array of the data that was validated:
+```PHP
+$validated = $request->validated();
 
+$validated = $validator->validated();
+```
+
+Alternatively, you may call the `safe` method on a form request or validator instance. This method returns an instance of `Illuminate\Support\ValidatedInput`. This object exposes `only`, `except`, and `all` methods to retrieve a subset of the validated data or the entire array of validated data:
+```PHP
+$validated = $request->safe()->only(['name', 'email']);
+$validated = $request->safe()->except(['name', 'email']);
+$validated = $request->safe()->all();
+```
+
+In addition, the `Illuminate\Support\ValidatedInput` instance may be iterated over and accessed like an array:
+```PHP
+// Validated data may be iterated...
+foreach ($request->safe() as $key => $value) {
+	// ...
+}
+
+// Validated data may be accessed as an array...
+$validated = $request->safe();
+
+$email = $validated['email'];
+```
+
+If you would like to add additional fields to the validated data, you may call the `merge` method:
+```PHP
+$validated = $request->safe()->merge(['name' => 'Taylor Otwell']);
+```
+
+If you would like to retrieve the validated data as a [collection](https://laravel.com/docs/10.x/collections) instance, you may call the `collect` method:
+```PHP
+$collection = $request->safe()->collect();
+```
 # Working With Error Messages
+After calling the `errors` method on a `Validator` instance, you will receive an `Illuminate\Support\MessageBag` instance, which has a variety of convenient methods for working with error messages. The `$errors` variable that is automatically made available to all views is also an instance of the `MessageBag` class.
+### Retrieving The First Error Message For A Field
+```PHP
+$errors = $validator->errors();
+
+echo $errors->first('email');
+```
+### Retrieving All Error Messages For A Field
+If you need to retrieve an array of all the messages for a given field, use the `get` method:
+```PHP
+foreach ($errors->get('email') as $message) {
+	// ...
+}
+```
+
+If you are validating an array form field, you may retrieve all of the messages for each of the array elements using the `*` character:
+```PHP
+foreach ($errors->get('attachments.*') as $message) {
+	// ...
+}
+```
+### Retrieving All Error Messages For All Fields
+```PHP
+foreach ($errors->all() as $message) {
+	// ...
+}
+```
+### Determining If Messages Exist For A Field
+```PHP
+if ($errors->has('email')) {
+	// ...
+}
+```
 ## Specifying Custom Messages In Language Files
+Laravel's built-in validation rules each have an error message that is located in your application's `lang/en/validation.php` file. If your application does not have a `lang` directory, you may instruct Laravel to create it using the `lang:publish` Artisan command.
+
+Within the `lang/en/validation.php` file, you will find a translation entry for each validation rule. You are free to change or modify these messages based on the needs of your application.
+
+In addition, you may copy this file to another language directory to translate the messages for your application's language.
+### Custom Messages For Specific Attributes
+You may customize the error messages used for specified attribute and rule combinations within your application's validation language files. To do so, add your message customizations to the `custom` array of your application's `lang/xx/validation.php` language file:
+```PHP
+'custom' => [
+	'email' => [
+		'required' => 'We need to know your email address!',
+		'max' => 'Your email address is too long!'
+	],
+],
+```
 ## Specifying Attributes In Language Files
+Many of Laravel's built-in error messages include an `:attribute` placeholder that is replaced with the name of the field or attribute under validation. If you would like the `:attribute` portion of your validation message to be replaced with a custom value, you may specify the custom attribute name in the `attributes` array of your `lang/xx/validation.php` language file:
+```PHP
+'attributes' => [
+	'email' => 'email address',
+],
+```
 ## Specifying Values In Language Files
+Some of Laravel's built-in validation rule error messages contain a `:value` placeholder that is replaced with the current value of the request attribute. However, you may occasionally need the `:value` portion of your validation message to be replaced with a custom representation of the value. For example, consider the following rule that specifies that a credit card number is required if the `payment_type` has a value of `cc`:
+```PHP
+Validator::make($request->all(), [
+	'credit_card_number' => 'required_if:payment_type,cc'
+]);
+```
+
+```PHP
+'values' => [
+	'payment_type' => [
+		'cc' => 'credit card'
+	],
+],
+```
+After defining this value, the validation rule will produce the following error message:
+```
+The credit card number field is required when payment type is credit card.
+```
 # Conditionally Adding Rules
 # Validating Arrays
 ## Validating Nested Array Input
