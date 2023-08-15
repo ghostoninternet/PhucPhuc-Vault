@@ -644,12 +644,243 @@ After defining this value, the validation rule will produce the following error 
 The credit card number field is required when payment type is credit card.
 ```
 # Conditionally Adding Rules
+### Skipping Validation When Fields Have Certain Values
+You may occasionally wish to not validate a given field if another field has a given value. You may accomplish this using the `exclude_if` validation rule. In this example, the `appointment_date` and `doctor_name` fields will not be validated if the `has_appointment` field has a value of `false`:
+```PHP
+use Illuminate\Support\Facades\Validator;
+
+$validator = Validator::make($data, [
+	'has_appointment' => 'required|boolean',
+	'appointment_date' => 'exclude_if:has_appointment,false|required|date',
+	'doctor_name' => 'exclude_if:has_appointment,false|required|string',
+]);
+```
+
+Alternatively, you may use the `exclude_unless` rule to not validate a given field unless another field has a given value:
+```PHP
+$validator = Validator::make($data, [
+	'has_appointment' => 'required|boolean',
+	'appointment_date' => 'exclude_unless:has_appointment,true|required|date',
+	'doctor_name' => 'exclude_unless:has_appointment,true|required|string',
+]);
+```
+### Validating When Present
+In some situations, you may wish to run validation checks against a field **only** if that field is present in the data being validated. To quickly accomplish this, add the `sometimes` rule to your rule list:
+```PHP
+$v = Validator::make($data, [
+	'email' => 'sometimes|required|email',
+]);
+```
+In the example above, the `email` field will only be validated if it is present in the `$data` array.
+### Complex Conditional Validation
+Sometimes you may wish to add validation rules based on more complex conditional logic. For example, you may wish to require a given field only if another field has a greater value than 100. Or, you may need two fields to have a given value only when another field is present. Adding these validation rules doesn't have to be a pain. First, create a `Validator` instance with your _static rules_ that never change:
+```PHP
+use Illuminate\Support\Facades\Validator;
+
+$validator = Validator::make($request->all(), [
+	'email' => 'required|email',
+	'games' => 'required|numeric',
+]);
+```
+
+Let's assume our web application is for game collectors. If a game collector registers with our application and they own more than 100 games, we want them to explain why they own so many games. For example, perhaps they run a game resale shop, or maybe they just enjoy collecting games. To conditionally add this requirement, we can use the `sometimes` method on the `Validator` instance.
+```PHP
+use Illuminate\Support\Fluent;
+
+$validator->sometimes('reason', 'required|max:500', function (Fluent $input) {
+	return $input->games >= 100;
+});
+```
+
+The first argument passed to the `sometimes` method is the name of the field we are conditionally validating. The second argument is a list of the rules we want to add. If the closure passed as the third argument returns `true`, the rules will be added. This method makes it a breeze to build complex conditional validations. You may even add conditional validations for several fields at once:
+```PHP
+$validator->sometimes(['reason', 'cost'], 'required', function (Fluent $input) {
+	return $input->games >= 100;
+});
+```
+### Complex Conditional Array Validation
+Sometimes you may want to validate a field based on another field in the same nested array whose index you do not know. In these situations, you may allow your closure to receive a second argument which will be the current individual item in the array being validated:
+```PHP
+$input = [
+	'channels' => [
+		[
+			'type' => 'email',
+			'address' => 'abigail@example.com',	
+		],
+		[
+			'type' => 'url',
+			'address' => 'https://example.com',
+		],	
+	],
+];
+
+$validator->sometimes('channels.*.address', 'email', function (Fluent $input, Fluent $item) {
+	return $item->type === 'email';
+});
+
+$validator->sometimes('channels.*.address', 'url', function (Fluent $input, Fluent $item) {
+	return $item->type !== 'email';
+});
+```
 # Validating Arrays
+The `array` rule accepts a list of allowed array keys. If any additional keys are present within the array, validation will fail:
+```PHP
+use Illuminate\Support\Facades\Validator;
+
+$input = [
+	'user' => [
+		'name' => 'Taylor Otwell',
+		'username' => 'taylorotwell',
+		'admin' => true,
+	],
+];
+
+Validator::make($input, [
+	'user' => 'array:name,username',
+]);
+```
+In general, you should always specify the array keys that are allowed to be present within your array. Otherwise, the validator's `validate` and `validated` methods will return all of the validated data, including the array and all of its keys, even if those keys were not validated by other nested array validation rules.
 ## Validating Nested Array Input
+Validating nested array based form input fields doesn't have to be a pain. You may use "dot notation" to validate attributes within an array. For example, if the incoming HTTP request contains a `photos[profile]` field, you may validate it like so:
+```PHP
+use Illuminate\Support\Facades\Validator;
+
+$validator = Validator::make($request->all(), [
+	'photos.profile' => 'required|image',
+]);
+```
+
+You may also validate each element of an array. For example, to validate that each email in a given array input field is unique, you may do the following:
+```PHP
+$validator = Validator::make($request->all(), [
+	'person.*.email' => 'email|unique:users',
+	'person.*.first_name' => 'required_with:person.*.last_name',
+]);
+```
+
+Likewise, you may use the `*` character when specifying [custom validation messages in your language files](https://laravel.com/docs/10.x/validation#custom-messages-for-specific-attributes), making it a breeze to use a single validation message for array based fields:
+
+```PHP
+'custom' => [
+	'person.*.email' => [
+		'unique' => 'Each person must have a unique email address',
+	]
+],
+```
 ## Error Message Indexes & Positions
 # Validating Files
+Laravel provides a variety of validation rules that may be used to validate uploaded files, such as `mimes`, `image`, `min`, and `max`. While you are free to specify these rules individually when validating files, Laravel also offers a fluent file validation rule builder that you may find convenient:
+```PHP
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rules\File;
+
+Validator::validate($input, [
+	'attachment' => [
+		'required',
+		File::types(['mp3', 'wav'])
+			->min(1024)
+			->max(12 * 1024),
+	],
+]);
+```
+
+```PHP
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
+use Illuminate\Validation\Rules\File;
+
+Validator::validate($input, [
+	'photo' => [
+		'required',
+		File::image()
+			->min(1024)
+			->max(12 * 1024)
+			->dimensions(Rule::dimensions()->maxWidth(1000)->maxHeight(500)),
+	],
+]);
+```
 # Validating Passwords
+To ensure that passwords have an adequate level of complexity, you may use Laravel's `Password` rule object:
+```PHP
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rules\Password;
+
+$validator = Validator::make($request->all(), [
+	'password' => ['required', 'confirmed', Password::min(8)],
+]);
+```
+
+The `Password` rule object allows you to easily customize the password complexity requirements for your application, such as specifying that passwords require at least one letter, number, symbol, or characters with mixed casing:
+```PHP
+// Require at least 8 characters...
+Password::min(8)
+
+// Require at least one letter...
+Password::min(8)->letters()
+
+// Require at least one uppercase and one lowercase letter...
+Password::min(8)->mixedCase()
+
+// Require at least one number...
+Password::min(8)->numbers()
+
+// Require at least one symbol...
+Password::min(8)->symbols()
+```
+
+```PHP
+Password::min(8)->uncompromised()
+```
+```PHP
+// Ensure the password appears less than 3 times in the same data leak...
+Password::min(8)->uncompromised(3);
+```
+
+```PHP
+Password::min(8)
+	->letters()
+	->mixedCase()
+	->numbers()
+	->symbols()
+	->uncompromised()
+```
+### Defining Default Password Rules
+You may find it convenient to specify the default validation rules for passwords in a single location of your application. You can easily accomplish this using the `Password::defaults` method, which accepts a closure. The closure given to the `defaults` method should return the default configuration of the Password rule. Typically, the `defaults` rule should be called within the `boot` method of one of your application's service providers:
+```PHP
+use Illuminate\Validation\Rules\Password;
+
+/**
+ * Bootstrap any application services.
+ */
+
+public function boot(): void
+{
+	Password::defaults(function () {
+		$rule = Password::min(8);
+	
+		return $this->app->isProduction()
+				? $rule->mixedCase()->uncompromised()
+				: $rule;
+	});
+}
+```
+
+Then, when you would like to apply the default rules to a particular password undergoing validation, you may invoke the `defaults` method with no arguments:
+```PHP
+'password' => ['required', Password::defaults()];
+```
+
+Occasionally, you may want to attach additional validation rules to your default password validation rules. You may use the `rules` method to accomplish this:
+```PHP
+use App\Rules\ZxcvbnRule;
+
+Password::defaults(function () {
+	$rule = Password::min(8)->rules([new ZxcvbnRule]);
+	// ...
+});
+```
 # Custom Validation Rules
 ## Using Rule Objects
+
 ## Using Closures
 ## Implicit Rules
