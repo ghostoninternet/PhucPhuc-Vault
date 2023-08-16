@@ -881,6 +881,158 @@ Password::defaults(function () {
 ```
 # Custom Validation Rules
 ## Using Rule Objects
+Laravel provides a variety of helpful validation rules; however, you may wish to specify some of your own. One method of registering custom validation rules is using rule objects. To generate a new rule object, you may use the `make:rule` Artisan command. Let's use this command to generate a rule that verifies a string is uppercase. Laravel will place the new rule in the `app/Rules` directory. If this directory does not exist, Laravel will create it when you execute the Artisan command to create your rule:
+```PHP
+php artisan make:rule Uppercase
+```
+Once the rule has been created, we are ready to define its behavior. A rule object contains a single method: `validate`. This method receives the attribute name, its value, and a callback that should be invoked on failure with the validation error message:
+```PHP
+<?php
 
+namespace App\Rules;
+
+use Closure;
+use Illuminate\Contracts\Validation\ValidationRule;
+
+class Uppercase implements ValidationRule
+{
+	/**
+	 * Run the validation rule.
+	 */
+	public function validate(string $attribute, mixed $value, Closure $fail): void
+	{
+		if (strtoupper($value) !== $value) {
+			$fail('The :attribute must be uppercase.');
+		}
+	}
+}
+```
+
+Once the rule has been defined, you may attach it to a validator by passing an instance of the rule object with your other validation rules:
+```PHP
+use App\Rules\Uppercase;
+
+$request->validate([
+	'name' => ['required', 'string', new Uppercase],
+]);
+```
+### Translating Validation Messages
+Instead of providing a literal error message to the `$fail` closure, you may also provide a [translation string key](https://laravel.com/docs/10.x/localization) and instruct Laravel to translate the error message:
+```PHP
+if (strtoupper($value) !== $value) {
+	$fail('validation.uppercase')->translate();
+}
+```
+
+If necessary, you may provide placeholder replacements and the preferred language as the first and second arguments to the `translate` method:
+```PHP
+$fail('validation.location')->translate([
+	'value' => $this->value,
+], 'fr')
+```
+### Accessing Additional Data
+If your custom validation rule class needs to access all of the other data undergoing validation, your rule class may implement the `Illuminate\Contracts\Validation\DataAwareRule` interface. This interface requires your class to define a `setData` method. This method will automatically be invoked by Laravel (before validation proceeds) with all of the data under validation:
+```PHP
+<?php
+
+namespace App\Rules;
+
+use Illuminate\Contracts\Validation\DataAwareRule;
+use Illuminate\Contracts\Validation\ValidationRule;
+
+class Uppercase implements DataAwareRule, ValidationRule
+
+{
+	/**
+	 * All of the data under validation.
+	 *
+	 * @var array<string, mixed>
+	 */
+
+	protected $data = [];
+
+	// ...
+
+	/**
+	 * Set the data under validation.
+	 *
+	 * @param array<string, mixed> $data
+	 */
+
+	public function setData(array $data): static
+	{
+		$this->data = $data;
+		
+		return $this;
+	}
+}
+```
+
+Or, if your validation rule requires access to the validator instance performing the validation, you may implement the `ValidatorAwareRule` interface:
+```PHP
+<?php
+
+namespace App\Rules;
+
+use Illuminate\Contracts\Validation\ValidationRule;
+use Illuminate\Contracts\Validation\ValidatorAwareRule;
+use Illuminate\Validation\Validator;
+
+class Uppercase implements ValidationRule, ValidatorAwareRule
+{
+	/**
+	* The validator instance.
+	*
+	* @var \Illuminate\Validation\Validator
+	*/
+
+	protected $validator;
+
+	// ...
+	
+	/**
+	* Set the current validator.
+	*/
+
+	public function setValidator(Validator $validator): static
+	{
+		$this->validator = $validator;
+		
+		return $this;
+	}
+}
+```
 ## Using Closures
+If you only need the functionality of a custom rule once throughout your application, you may use a closure instead of a rule object. The closure receives the attribute's name, the attribute's value, and a `$fail` callback that should be called if validation fails:
+```PHP
+use Illuminate\Support\Facades\Validator;
+use Closure;
+
+$validator = Validator::make($request->all(), [
+	'title' => [
+		'required',
+		'max:255',
+			function (string $attribute, mixed $value, Closure $fail) {
+				if ($value === 'foo') {
+					$fail("The {$attribute} is invalid.");
+			}
+		},
+	],
+]);
+```
 ## Implicit Rules
+By default, when an attribute being validated is not present or contains an empty string, normal validation rules, including custom rules, are not run. For example, the [`unique`](https://laravel.com/docs/10.x/validation#rule-unique) rule will not be run against an empty string:
+```PHP
+use Illuminate\Support\Facades\Validator;
+
+$rules = ['name' => 'unique:users,name'];
+
+$input = ['name' => ''];
+
+Validator::make($input, $rules)->passes(); // true
+```
+
+For a custom rule to run even when an attribute is empty, the rule must imply that the attribute is required. To quickly generate a new implicit rule object, you may use the `make:rule` Artisan command with the `--implicit` option:
+```PHP
+php artisan make:rule Uppercase --implicit
+```
