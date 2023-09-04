@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Random Knowledge/isomorphic/What is an isomorphic application.md",
-                "mode": "source",
+                "file": "Introduction to Git and Github/Week 3.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Random Knowledge/isomorphic/What is an isomorphic application.md",
+                "file": "Introduction to Git and Github/Week 3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Random Knowledge/isomorphic/What is an isomorphic application.md",
+                "file": "Introduction to Git and Github/Week 3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Random Knowledge/isomorphic/What is an isomorphic application.md"
+                "file": "Introduction to Git and Github/Week 3.md"
               }
             }
           }
@@ -149,8 +149,12 @@
   },
   "active": "6c069deaf52d4f9c",
   "lastOpenFiles": [
-    "HTML - CSS - JavaScript/F8/HTML DOM/DOM Events.md",
+    "Introduction to Git and Github/Week 4.md",
+    "Introduction to Git and Github/Week 3.md",
+    "Introduction to Git and Github/Week 2.md",
+    "Trả lời câu hỏi Git.md",
     "Random Knowledge/isomorphic/What is an isomorphic application.md",
+    "HTML - CSS - JavaScript/F8/HTML DOM/DOM Events.md",
     "Random Knowledge/isomorphic",
     "Random Knowledge",
     "HTML - CSS - JavaScript/F8/HTML DOM/Get Elements Methods.md",
@@ -158,14 +162,11 @@
     "HTML - CSS - JavaScript/HTML DOM Knowledge/HTML Collection and NodeList.md",
     "HTML - CSS - JavaScript/F8/HTML DOM/DOM Text.md",
     "HTML - CSS - JavaScript/F8/HTML DOM/DOM Attribute.md",
-    "Trả lời câu hỏi Git.md",
     "Laravel/Laravel Notes of Code with Dary Course.md",
     "API/APIs for Beginners 2023 - How to use an API - Freecodecamp.md",
     "API/Unit 1 - What is an API.md",
     "Validation.md",
     "API",
-    "Introduction to Git and Github/Week 3.md",
-    "Introduction to Git and Github/Week 2.md",
     "Introduction to Git and Github/Week 1.md",
     "Introduction to Git and Github/Introduction to Git and Github - Goolge Coursera.md",
     "React Advanced - Meta Front-end Coursera/Week 3 - Advanced React.md",
@@ -189,7 +190,6 @@
     "Kiến Trúc Máy Tính",
     "Laravel/Laravel Training/Migrations.md",
     "Laravel/Laravel Training/Pagination.md",
-    "Laravel/Laravel Training/Database - Query Builder.md",
     "Laravel/Laravel Training/Digging Deeper",
     "React Advanced - Meta Front-end Coursera",
     "Laravel/Laravel Training",
